@@ -18,7 +18,7 @@ class Post(models.Model):
 
     post_id = models.SlugField(max_length=200, unique=True)
     title = models.CharField(max_length=200, unique=True)
-    gamer_tag = models.ForeignKey(User, on_delete=models.CASCADE)
+    gamer_tag = models.ForeignKey(User, on_delete=models.CASCADE, db_column="gamer_tag", null=True)
     description = models.TextField(max_length=500, unique=True)
     datetime = models.DateTimeField()
     game = models.CharField(max_length=20, choices=GAME_CHOICES, default='Other')
@@ -27,9 +27,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
 
-
-class Comments(models.Model):
+class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
     body = models.TextField()
