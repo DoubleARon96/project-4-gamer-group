@@ -29,7 +29,7 @@ class Post(models.Model):
         return self.title
 
 
-#class Comment(models.Model):
+#class Chat(models.Model):
 #    post = models.ForeignKey(
 #        Post, on_delete=models.CASCADE, related_name="comments")
 #    author = models.ForeignKey(
