@@ -17,7 +17,7 @@ class Post(models.Model):
 
     post_id = models.SlugField(max_length=200, unique=True)
     title = models.CharField(max_length=200, unique=True)
-    gamer_tag = models.CharField(max_length=200, unique=True)
+    gamer_tag = models.ForeignKey(User,on_delete=models.CASCADE)
     description = models.TextField(max_length=500, unique=True)
     datetime = models.DateTimeField()
     game = models.CharField(max_length=20, choices=GAME_CHOICES, default='Other')
