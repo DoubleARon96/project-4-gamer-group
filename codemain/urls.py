@@ -22,6 +22,8 @@ from about import views as about_views
 urlpatterns = [
     #path('game_sessions', game_sessions_views.my_game_sessions, name='game_sessions'),
     path("", include("game_sessions.urls"), name="game_sessions-urls"),
+    path("", include("about.urls"), name="about-urls"),
     path('admin/', admin.site.urls),
-    path('about', about_views.my_about, name='about'),
+    #path('about', about_views.my_about, name='about'),
+    
 ]

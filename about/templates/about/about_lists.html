@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test View</title>
+</head>
+
+<body>
+    <h1>About Us</h1>
+    {% for aboutstory in object_list %}
+    <h2>{{post.title}}</h2>
+    <p>{{post.stories}}</p>
+    <p>Author: {{post.author}}</p>
+    {% endfor %}
+</body>
+
+</html>

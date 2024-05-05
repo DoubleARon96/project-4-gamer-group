@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
+from django.views import generic
+from .models import AdminStory
 
-def my_about (request):
-    return HttpResponse("Test!!!")
-# Create your views here.
+
+class about_list(generic.ListView):
+    queryset = AdminStory.objects.all()
+    template_name = "about_list.html"
