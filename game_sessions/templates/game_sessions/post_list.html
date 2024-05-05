@@ -12,7 +12,7 @@
     <h1>Game Sessions list</h1>
     {% for post in object_list %}
     <h2>{{post.title}}</h2>
-    <p>{{post.game}}</p>
+    <p>Game: {{post.game}}</p>
     <p>{{post.description}}</p>
     <p>Author: {{post.gamer_tag}}</p>
     {% endfor %}
