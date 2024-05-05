@@ -4,7 +4,8 @@ from .models import Post
 
 
 class Game_session_List(generic.ListView):
-    model = Post
+    queryset = Post.objects.all()
+    template_name = "post_list.html"
 #from django.http import HttpResponse
 # Create your views here.
 
