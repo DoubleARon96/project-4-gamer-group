@@ -20,10 +20,10 @@ from django.urls import path, include
 from about import views as about_views
 
 urlpatterns = [
-    #path('game_sessions', game_sessions_views.my_game_sessions, name='game_sessions'),
+    path('admin/', admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),
+    #path('about', about_views.my_about, name='about'),
     path("", include("game_sessions.urls"), name="game_sessions-urls"),
     path("", include("about.urls"), name="about-urls"),
-    path('admin/', admin.site.urls),
-    #path('about', about_views.my_about, name='about'),
     
 ]
