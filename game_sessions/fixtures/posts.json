@@ -1,0 +1,16 @@
+[
+    {
+        "model": "game_session.post",
+        "pk": null,
+        "fields": {
+            "title": "Any game Any Rules",
+            "post_id": "gamenight",
+            "gamer_tag": 1,
+            "description": "<p><b>Introduction: The Ghost in the Machine\r\n</b></p><p>\r\nIf you've spent any time coding in JavaScript, you've probably found yourself in a one-on-one duel with the browser console at some point. The struggle is real: you're armed with console.log, but the bugs still seem to emerge victoriously, eluding your every attempt to exterminate them.\r\n</p><p><b>\r\nThe Humble console.log\r\n</b></p><p>\r\nIn the world of debugging, console.log is the bread and butter of JavaScript developers. Need to know what's hiding in that object? Or why that function returns undefined? Just slap in a console.log, and you're good to go! Well, sort of. If only things were that easy.\r\n</p><p><b>\r\nBrowser Dev Tools: Your Secret Weapon\r\n</b></p><p>\r\nBrowser development tools are like the Swiss Army knife of debugging. Chrome DevTools, Firefox Developer Edition, Safari Web Inspector—you name it, they've got it. With the power to inspect elements, trace network requests, and even simulate mobile devices, these tools turn you into a veritable Sherlock Holmes.</p><p><b>\r\n\r\nDebuggers and Breakpoints: Pause for a Cause</b></p><p>\r\n\r\nJavaScript has a built-in debugger statement that allows you to stop the code execution right where you think the culprit lies. Pausing the code helps you inspect variables, traverse the call stack, and essentially catch the bug red-handed. The trick is to know where to put the breakpoint; otherwise, you're just pausing for no reason.\r\n</p><p><b>\r\nLinters and Error Trackers: Because Two Heads Are Better Than One\r\n</b></p><p>\r\nLinters like ESLint don’t just keep your code clean; they act as the first line of defense against syntactic and logical errors. If you’re working on a large-scale project, consider using error-tracking services like Sentry, which aggregate, filter, and prioritize errors for you.\r\n</p><p><b>\r\nIn Conclusion: Debugging is an Art, Not Just a Chore\r\n</b></p><p>\r\nDebugging is an integral part of the development process, and mastering it is like gaining a superpower. It's the forensic science of the coding world, full of clues, suspects, and occasionally, red herrings. So the next time you find yourself down the debugging rabbit hole, remember: it's not just about finding what's broken; it's about understanding how things work—or why they don't.\r\n\r\nWith enough practice and patience, debugging will transform from a source of dread to a rewarding challenge. Because at the end of the day, there's nothing quite like the sweet victory of a bug-free script.</p>",
+            "datetime": "02/06/2024",
+            "game": "Other",
+            "player_count": "3",
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    }
+]    
