@@ -31,7 +31,28 @@ class Post(models.Model):
     def __str__(self):
         return f"{self.title} | Made by {self.gamer_tag}"
     
-    
+    #class JoinSession(models.Model):
+    #game = models.ForeignKey(Game, on_delete=models.CASCADE)
+    #available_spaces = models.PositiveIntegerField()
+    # Other fields as needed (e.g., session name, date, etc.)
+    #def join_session(request, session_id):
+    #session = JoinSession.objects.get(pk=session_id)
+    #if session.available_spaces > 0:
+    #    session.available_spaces -= 1
+    #    session.save()
+        # Add the user to the session (e.g., create a Player object)
+        # Redirect to the session details page
+    #else:
+        # Handle case when no available spaces
+        # Redirect to an error page or display a message
+
+
+    #This is to help make it count the player number and let you join and leave
+    #class InheritActionForm(forms.ModelForm):
+    #type = forms.ChoiceField(choices=INHERIT_ACTION_TYPE)  # Use your custom choices here
+
+    #class Meta:
+    #    model = InheritAction
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
