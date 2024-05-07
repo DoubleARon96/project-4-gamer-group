@@ -4,8 +4,8 @@
 
 <div class="col-12 mt-3 left">
     <div class="row">
-        {% for post in post_list %}
-        <div class="col-md-8 text-center ">
+        {% for adminstory in about_list %}
+        <div class="col-md-12 text-center ">
             <div class="card mb-4 ">
                 <div class="card-body">
                     <div class="image-container">
@@ -13,14 +13,10 @@
                             <p class="author">Gamer: {{ post.gamer_tag }}</p>
                         </div>
                     </div>
-                    <a href="#" class="post-link">
                         <h2 class="card-title">{{ post.title }}</h2>
-                    </a>
                     <hr />
-                    <p class="card-text text-muted h6">{{ post.updated_on}}
+                    <p class="card-text text-muted h6">{{post.stories}}
                     </p>
-                    <hr />
-                    <p class="card-text text-muted h6">Spaces Availible: {{post.player_count}}</p>
                 </div>
             </div>
         </div>
