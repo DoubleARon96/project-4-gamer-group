@@ -17,12 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 #from game_sessions import views as game_sessions_views
-from about import views as about_views
+#from about import views as about_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     #path('about', about_views.my_about, name='about'),
+    path("", include("home_page.urls"), name="home-urls"),
     path("", include("game_sessions.urls"), name="game_sessions-urls"),
     path("", include("about.urls"), name="about-urls"),
     
