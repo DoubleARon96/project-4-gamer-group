@@ -13,7 +13,7 @@
                             <p class="author">Gamer: {{ post.gamer_tag }}</p>
                         </div>
                     </div>
-                    <a href="#" class="post-link">
+                    <a href="{% url 'post_description' post.post_id %}" class="post-link">
                         <h2 class="card-title">{{ post.title }}</h2>
                     </a>
                     <hr />
