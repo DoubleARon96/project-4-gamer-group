@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.views import generic
 from .models import HomePage
 
@@ -6,13 +6,16 @@ def home_list(request):
     """
     Renders the About page
     """
-    home_page = HomePage.objects.all(filter(1))
+    try:
+        home_page = HomePage.objects.get(gamer_tag="Aaron") 
+    except HomePage.DoesNotExist:
+        home_page= get_object_or_404
 
-    return render(
-        request,
-        "home_page/home_content_list.html",
-        {"home_page": HomePage},
-    )
+        content = {
+            "home_page": home_page,
+        }
+
+        return render(request, "home_page/home_content_list.html", content)
 
 #class Home_Page(generic.View):
 #    queryset =()
