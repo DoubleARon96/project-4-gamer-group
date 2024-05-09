@@ -23,8 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     #path('about', about_views.my_about, name='about'),
-    path("", include("home_page.urls"), name="home-urls"),
-    path("", include("game_sessions.urls"), name="game_sessions-urls"),
-    path("", include("about.urls"), name="about-urls"),
+    path("", include('about.urls'), name='about-urls'),
+    path("", include('home_page.urls'), name='home-urls'),
+    path("", include('game_sessions.urls'), name='game_sessions-urls'),
     
 ]

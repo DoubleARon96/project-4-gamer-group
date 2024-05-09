@@ -3,6 +3,18 @@ from django.views import generic
 from .models import AdminStory
 
 
-class about_list(generic.ListView):
-    queryset = AdminStory.objects.all()
-    template_name = "about_list.html"
+#class about_list(generic.ListView):
+#    queryset = AdminStory.objects.all()
+#    template_name = "about_list.html"
+
+def about_list(request):
+    """
+    Renders the About page
+    """
+    about = AdminStory.objects.all().order_by('-updated_on').first()
+
+    return render(
+        request,
+        "about/about_base.html",
+        {"about": AdminStory},
+    )

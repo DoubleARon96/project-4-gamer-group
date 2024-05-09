@@ -1,4 +1,6 @@
+{% load static %}
 {% url 'home' as home_url %}
+{% url 'about' as about_url %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -21,7 +23,7 @@
     <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
           <a class="nav-link
-          {% if request.path == game_sessions_url %}active{% endif %}"
+          {% if request.path == home_url %}active{% endif %}"
           aria-current="page" href="{% url 'home' %}">Home</a>
         </li>
         <li class="nav-item">
@@ -30,7 +32,7 @@
           aria-current="page" href="{% url 'game_sessions' %}">Game Sessions</a>
         </li>
         <li class="nav-item">
-          <a class="{% if request.path == game_sessions_url %}active{% endif %}"
+          <a class="{% if request.path == about_url %}active{% endif %}"
           aria-current="page" href="{% url 'about' %}">About</a>
         </li>
         <li class="nav-item">

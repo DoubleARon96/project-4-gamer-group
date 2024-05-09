@@ -3,6 +3,7 @@ from django.views import generic
 from .models import Post
 
 
+
 class Game_session_List(generic.ListView):
     queryset = Post.objects.all()
     #template_name = "post_list.html"
