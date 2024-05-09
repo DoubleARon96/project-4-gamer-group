@@ -10,10 +10,11 @@
 
 <body>
     <h1>About Us</h1>
-    {% for aboutstory in object_list %}
-    <h2>{{post.title}}</h2>
-    <p>{{post.stories}}</p>
-    <p>Creator: {{post.author}}</p>
+    {% for adminstory in object_list %}
+    <h2>{{adminstory.title}}</h2>
+    <p>{{adminstory.stories}}</p>
+    <p>Creator: {{adminstory.author}}</p>
+    <p>{{adminstory.updated_on}}</p>
     {% endfor %}
 </body>
 

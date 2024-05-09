@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-
 {% block content %}
+{% load static %}
 
 <div class="col-12 mt-3 left">
     <div class="row">
@@ -10,13 +10,14 @@
                 <div class="card-body">
                     <div class="image-container">
                         <div class="image-flash">
-                            <p class="author">Gamer: {{ post.gamer_tag }}</p>
+                            <p class="author">Gamer: {{adminstory.gamer_tag }}</p>
                         </div>
                     </div>
-                        <h2 class="card-title">{{ post.title }}</h2>
+                        <h2 class="card-title">{{adminstory.title }}</h2>
                     <hr />
-                    <p class="card-text text-muted h6">{{post.stories}}
+                    <p class="card-text h6">{{adminstory.stories}}
                     </p>
+                    <p class="text-muted">{{adminstory.updated_on}}</p>
                 </div>
             </div>
         </div>
