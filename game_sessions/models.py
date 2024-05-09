@@ -24,6 +24,7 @@ class Post(models.Model):
     game = models.CharField(max_length=20, choices=GAME_CHOICES, default='Other')
     player_count = models.IntegerField()
     updated_on = models.DateTimeField(auto_now=True)
+    slug = models.SlugField(post_id, default=post_id)
 
     class Meta:
         ordering = ["-updated_on"]
