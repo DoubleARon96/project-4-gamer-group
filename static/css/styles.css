@@ -1,3 +1,13 @@
+/*-----------------------------------------------------------------------content*/
 .card {
     align-self: center;
+}
+/*-----------------------------------------------------------------------Nav*/
+.active {
+    background-color: aqua;
+}
+/*-----------------------------------------------------------------------sign up, login and logout*/
+.border {
+    /*i need to add more and i need to make a inner box styles too*/
+    box-shadow: 2px 2px 2px;
 }

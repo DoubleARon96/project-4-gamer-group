@@ -4,6 +4,9 @@ from .models import Post
 
 
 
+
+
+
 class Game_session_List(generic.ListView):
     queryset = Post.objects.all()
     #template_name = "post_list.html"
@@ -15,9 +18,13 @@ class Game_session_List(generic.ListView):
 
         queryset = Post.objects.filter()
         post = get_object_or_404(queryset, slug=post_id)
+        comments = post.comments.all().order_by("-created_on")
+        comment_count = post.comments.filter(approved=True).count()
 
         return render(
             request,
             "game_sessions/post_descripton.html",
-            {"post": post},
+            {"post": post,
+            "comments": comments,
+            "comment_count": comment_count,}
     )
