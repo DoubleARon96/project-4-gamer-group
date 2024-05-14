@@ -23,7 +23,9 @@ class Game_session_List(generic.ListView):
 
         return render(request,
             "game_sessions/post_descripton.html",
-            {"post": post,
+            {
+            "post": post,
             "comments": comments,
-            "comment_count": comment_count,}
+            "comment_count": comment_count,
+            }
     )
