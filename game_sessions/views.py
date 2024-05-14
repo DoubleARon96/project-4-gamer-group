@@ -21,8 +21,7 @@ class Game_session_List(generic.ListView):
         comments = post.comments.all().order_by("-created_on")
         comment_count = post.comments.filter(approved=True).count()
 
-        return render(
-            request,
+        return render(request,
             "game_sessions/post_descripton.html",
             {"post": post,
             "comments": comments,

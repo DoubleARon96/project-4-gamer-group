@@ -1,6 +1,13 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 text-center">
+            <h1>Welcome</h1>
+        </div>
+    </div>
+</div>
 
 <div class="col-12 mt-3 left">
     <div class="row">
@@ -10,20 +17,18 @@
                 <div class="card-body">
                     <div class="image-container">
                         <div class="image-flash">
-                            <p class="author">{{ gamer_tag }}</p>
+                            <p class="author">{{ homepage.gamer_tag }}</p>
                         </div>
                     </div>
-                        <h2 class="card-title">{{ title }}</h2>
+                    <h2 class="card-title">{{ homepage.title }}</h2>
                     </a>
                     <hr />
-                    <p class="card-text h6">{{ content }}</p>
+                    <p class="card-text h6">{{ homepage.content }}</p>
                 </div>
             </div>
         </div>
-        {% if forloop.counter|divisibleby:3 %}
     </div>
     <div class="row">
-        {% endif %}
         {% endfor %}
 
     </div>
@@ -33,11 +38,10 @@
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
-    <li>
-        <a href="?page={{ page_obj.previous_page_number }}"
-          class="page-link">&laquo; BACK</a>
-    </li>
-    {% endif %}
+        <li>
+            <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; BACK</a>
+        </li>
+        {% endif %}
         {% if page_obj.has_next %}
         <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
         {% endif %}
