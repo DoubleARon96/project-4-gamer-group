@@ -11,10 +11,6 @@ def about_list(request):
     """
     Renders the About page
     """
-    about = AdminStory.objects.all().order_by('-updated_on').first()
-
-    return render(
-        request,
-        "about/about_base.html",
-        {"about": AdminStory},
-    )
+    content = AdminStory.objects.all()
+    viewbag = { "contents": content }
+    return render(request, "about/about_base.html", viewbag)

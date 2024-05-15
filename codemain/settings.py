@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'about',
     'home_page',
     'game_sessions',
-    
 ]
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'

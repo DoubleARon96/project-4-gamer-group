@@ -8,16 +8,18 @@
         <div class="col-md-12 text-center ">
             <div class="card mb-4 ">
                 <div class="card-body">
+                    {% for content in contents %}
                     <div class="image-container">
                         <div class="image-flash">
-                            <p class="author">Gamer:{{adminstory.gamer_tag}}</p>
+                            <p class="author">Gamer:{{content.gamer_tag}}</p>
                         </div>
                     </div>
-                        <h2 class="card-title">{{adminstory.title}}</h2>
+                        <h2 class="card-title">{{content.title}}</h2>
                     <hr />
-                    <p class="card-text h6">{{adminstory.stories| safe}} 
+                    <p class="card-text h6">{{content.stories| safe}} 
                     </p>
-                    <p class="text-muted">{{adminstory.updated_on}}</p>
+                    <p class="text-muted">{{content.updated_on}}</p>
+                    {% endfor %}
                 </div>
             </div>
         </div>

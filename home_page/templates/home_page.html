@@ -4,38 +4,36 @@
 <div class="container">
     <div class="row">
         <div class="col col-12 text-center">
-            <h1>Welcome</h1>
+            <h1>{{title}}</h1>
         </div>
     </div>
 </div>
 
 <div class="col-12 mt-3 left">
     <div class="row">
-        <div class="col">
-            <p>{{ contents }}</p>
-        {% for homepage in home_list %}
-        <div class="col-md-8 text-center ">
-            <div class="card mb-4 ">
-                <div class="card-body">
-                    <div class="image-container">
-                        <div class="image-flash">
-                            <p class="author">{{ homepage.gamer_tag }}</p>
+        <div class="col col-12">
+            {% for homepage in contents %}
+            <div class="col-md-12 text-center ">
+                <div class="card mb-4 ">
+                    <div class="card-body">
+                        <div class="image-container">
+                            <div class="image-flash">
+                                <p class="author">{{ homepage.gamer_tag }}</p>
+                            </div>
                         </div>
+                        <h2 class="card-title">{{ homepage.title }}</h2>
+                        </a>
+                        <hr />
+                        <p class="card-text h6">{{ homepage.content }}</p>
                     </div>
-                    <h2 class="card-title">{{ homepage.title }}</h2>
-                    </a>
-                    <hr />
-                    <p class="card-text h6">{{ homepage.content }}</p>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        {% endfor %}
+    </div>    
+        <div class="row">
+            {% endfor %}
 
-    </div>
-</div>
-</div>
+        </div>
 {% if is_paginated %}
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
