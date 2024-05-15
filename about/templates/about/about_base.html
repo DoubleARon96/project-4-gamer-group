@@ -11,13 +11,11 @@
                     {% for content in contents %}
                     <div class="image-container">
                         <div class="image-flash">
-                            <p class="author">Gamer:{{content.gamer_tag}}</p>
                         </div>
                     </div>
                         <h2 class="card-title">{{content.title}}</h2>
                     <hr />
-                    <p class="card-text h6">{{content.stories| safe}} 
-                    </p>
+                    <p class="card-text h6">{{content.stories| safe}}</p>
                     <p class="text-muted">{{content.updated_on}}</p>
                     {% endfor %}
                 </div>

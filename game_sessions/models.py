@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Post(models.Model):
     """
-    this is the post class this lets admins and users with right authority to 
+    this is the post class this lets admins and users with right authority to
     make a post
     """
     GAME_CHOICES = (
@@ -31,7 +31,7 @@ class Post(models.Model):
 
     def __str__(self):
         return f"{self.title} | Made by {self.gamer_tag}"
-    
+
     #class JoinSession(models.Model):
     #game = models.ForeignKey(Game, on_delete=models.CASCADE)
     #available_spaces = models.PositiveIntegerField()

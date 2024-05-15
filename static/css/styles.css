@@ -1,18 +1,19 @@
 /*-----------------------------------------------------------------------all selector*/
 body {
-    background-color: darkgreen !important;
+    background-color: rgb(29, 28, 28) !important;
 }
 
 /*-----------------------------------------------------------------------content*/
 
 /*-----------------------------------------------------------------------Nav*/
 .active {
-    background-color: aqua !important;
+    background-color: rgba(29,133, 57, 0.7) !important;
+    margin: 5px;
+
 }
 /*-----------------------------------------------------------------------sign up, login and logout*/
 .border {
     justify-content: center;
-    box-shadow: 2px 2px 2px 2px black;
     margin: 10px;
     background-color: aliceblue !important;
     border-radius: 14px !important;
@@ -20,6 +21,9 @@ body {
     -moz-border-radius: 14px !important;
     -ms-border-radius: 14px !important;
     -o-border-radius: 14px !important;
+    -webkit-box-shadow:0px 0px 105px 45px rgba(45,255,196,0.9)  !important;
+    -moz-box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9)  !important;
+    box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9)  !important;
 }
 /*-----------------------------------------------------------------------Background*/
 
