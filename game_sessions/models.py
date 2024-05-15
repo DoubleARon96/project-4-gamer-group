@@ -36,7 +36,7 @@ class Post(models.Model):
     #game = models.ForeignKey(Game, on_delete=models.CASCADE)
     #available_spaces = models.PositiveIntegerField()
     # Other fields as needed (e.g., session name, date, etc.)
-    #def join_session(request, session_id):
+    # def join_session(request, session_id):
     #session = JoinSession.objects.get(pk=session_id)
     #if session.available_spaces > 0:
     #    session.available_spaces -= 1

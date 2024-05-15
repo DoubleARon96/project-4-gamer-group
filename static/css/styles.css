@@ -1,16 +1,30 @@
 /*-----------------------------------------------------------------------all selector*/
-body{
-    background-color: black;
+body {
+    background-color: darkgreen !important;
 }
 
 /*-----------------------------------------------------------------------content*/
 
 /*-----------------------------------------------------------------------Nav*/
 .active {
-    background-color: aqua;
+    background-color: aqua !important;
 }
 /*-----------------------------------------------------------------------sign up, login and logout*/
 .border {
-    /*i need to add more and i need to make a inner box styles too*/
-    box-shadow: 2px 2px 2px;
+    justify-content: center;
+    box-shadow: 2px 2px 2px 2px black;
+    margin: 10px;
+    background-color: aliceblue !important;
+    border-radius: 14px !important;
+    -webkit-border-radius: 14px !important;
+    -moz-border-radius: 14px !important;
+    -ms-border-radius: 14px !important;
+    -o-border-radius: 14px !important;
+}
+/*-----------------------------------------------------------------------Background*/
+
+/*-----------------------------------------------------------------------game_sessions*/
+.sessions {
+        display: ruby-text !important;
+
 }
