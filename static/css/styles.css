@@ -35,3 +35,26 @@ body {
 display: flex;
 justify-content: center;
 }
+/*-----------------------------------------------------------------------questions*/
+
+.text-hover :hover{
+    background-color: rgba(rgb(18, 91, 41) 0.5) !important;
+}
+#questions_input {
+    display:none;
+}
+.toggle_none {
+    display: 0 !important;
+}
+.toggle_none ~ #questions_input {
+    display: flex !important;
+}
+/*----------------------------------------------------------------------- questions*/
+.questions_cards{
+    display: grid !important;
+    /* margin: auto; */
+    justify-content: center !important;
+}
+.img_head{
+    width:100%;
+}

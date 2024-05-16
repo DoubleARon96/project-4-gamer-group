@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 <div class="masthead">
-    <div class="container">
+    <div class="container border">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <h1 class="post-title">{{ post.title }}</h1>
@@ -11,16 +12,16 @@
                 <p class="post-subtitle">{{ post.gamer_tag }} | {{ post.updated_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src="{% static 'images/pc-build.jpg' %}" class="scale" alt="no image yet">
+                <img src="{% static 'images/pc_build.jpg' %}" class="scale img_head" alt="no image yet">
             </div>
         </div>
     </div>
 </div>
 
 <div class="container">
-    <div class="row">
+    <div class="row border">
       <!-- this is the description part-->
-        <div class="col card mb-8  mt-3 top">
+        <div class="col-10 card top">
             <div class="card" style="width: 18rem;">
                 <img src="" class="card-img-top" alt="Game image">
                 <div class="card-body">
@@ -43,7 +44,7 @@
   </div>
   <!-- Comments -->
   <div class="row">
-    <div class="col-md-8 card mb-4 mt-3 ">
+    <div class="col-md-8 card">
       <h3>Questions:</h3>
       <div class="card-body">
         {% for comment in comments %}
@@ -72,13 +73,10 @@
         <i class="far fa-comments"></i> {{ comment_count }}
       </strong>
     </div>
-    <div class="col-12">
-      <hr>
-    </div>
   </div>
   <!-- Displaying Comments -->
-  <div class="row">
-    <div class="col-md-8 card mb-5 mt-3 ">
+  <div class="row text-center">
+    <div class="col-md-12 card">
       <h3>Questions:</h3>
       <div class="card-body">
         <!-- We want a for loop inside the empty control tags
@@ -109,6 +107,28 @@
   </div>
         <!-- Our for loop ends here -->
         {% endfor %}
+      </div>
+    </div>
+  </div>
+   <!-- Creating New questions -->
+   <div class="col-md-11 card  text-center">
+    <input type="checkbox" id="questions_input" name="questions" value="questions">
+    <label for="comment_form" class="questions_label fs-2 text-hover">Have a Questions ?</label>
+    <div class="col toggle_none">
+      <div class="card-body toggle_none ">
+        {% if user.is_authenticated %}
+        <h3>Leave a comment:</h3>
+        <p>Posting as: {{ user.username }}</p>
+        <form id="commentForm" method="post"
+          style="margin-top: 1.3em;">
+          {{ comment_form | crispy }}
+          {% csrf_token %}
+          <button id="submitButton" type="submit"
+            class="btn btn-signup btn-lg">Submit</button>
+        </form>
+        {% else %}
+        <p>Log in to leave a comment</p>
+        {% endif %}
       </div>
     </div>
   </div>
