@@ -2,14 +2,12 @@
 body {
     background-color: rgb(29, 28, 28) !important;
 }
-
 /*-----------------------------------------------------------------------content*/
 
 /*-----------------------------------------------------------------------Nav*/
 .active {
     background-color: rgba(29,133, 57, 0.7) !important;
     margin: 5px;
-
 }
 /*-----------------------------------------------------------------------sign up, login and logout*/
 .border {
@@ -23,12 +21,17 @@ body {
     -o-border-radius: 14px !important;
     -webkit-box-shadow:0px 0px 105px 45px rgba(45,255,196,0.9)  !important;
     -moz-box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9)  !important;
-    box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9)  !important;
+    box-shadow: 0px 0px 40px 25px rgba(45,255,196,0.9)  !important;
 }
 /*-----------------------------------------------------------------------Background*/
 
 /*-----------------------------------------------------------------------game_sessions*/
 .sessions {
         display: ruby-text !important;
+}
 
+/*-----------------------------------------------------------------------game_sessions*/
+.home_page_content_p{
+display: flex;
+justify-content: center;
 }

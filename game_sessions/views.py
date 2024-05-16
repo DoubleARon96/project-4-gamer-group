@@ -29,3 +29,5 @@ class Game_session_List(generic.ListView):
             "comment_count": comment_count,
             }
     )
+
+    
