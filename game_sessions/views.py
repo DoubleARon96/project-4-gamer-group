@@ -1,5 +1,6 @@
 from django.shortcuts import render,get_object_or_404
 from django.views import generic
+from django.contrib import messages
 from .models import Post
 from .forms import CommentForm
 
@@ -28,6 +29,10 @@ class Game_session_List(generic.ListView):
                 comment.gamer_tag = request.user
                 comment.post = post
                 comment.save()
+                messages.add_message(
+                request, messages.SUCCESS,
+        'Comment Is Just Going To Be Checked '
+    )
         comment_form = CommentForm()
 
         return render(request,
