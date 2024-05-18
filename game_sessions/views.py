@@ -1,4 +1,4 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.contrib import messages
 from .models import Post
@@ -47,4 +47,13 @@ class Game_session_List(generic.ListView):
             "joined_status":0,
             }
     )
+
+    def delete_view(request, post_id):
+        post = get_object_or_404(Post, slug=post_id)
+        if request.method == "POST":
+            post.delete()
+            # Optionally, you can add a success message here
+            # messages.success(request, "Post deleted successfully.")
+            return redirect("post_list.html")  # Redirect to your list view
+        return render(request, "your_template_for_delete_confirmation.html", {"post": post})
    
