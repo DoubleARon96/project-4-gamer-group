@@ -16,6 +16,7 @@ class Game_session_List(generic.ListView):
     paginate_by = 3
 
 
+
     def post_description(request, post_id):
 
         queryset = Post.objects.filter()
@@ -35,6 +36,7 @@ class Game_session_List(generic.ListView):
     )
         comment_form = CommentForm()
 
+
         return render(request,
             "game_sessions/post_descripton.html",
             {
@@ -42,7 +44,7 @@ class Game_session_List(generic.ListView):
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
+            "joined_status":0,
             }
     )
-
-    
+   
