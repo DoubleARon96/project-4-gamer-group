@@ -99,8 +99,10 @@
                 This comment is awaiting approval
               </p>
               {% endif %}
+              {% if user.is_authenticated and comment.author == user %}
+              <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+              {% endif %}
             </div>
-            <!-- Our for loop ends here -->
             {% endfor %}
           </div>
         </div>
@@ -135,16 +137,14 @@
   <div class="row">
     <div class="col-md-8 offset-md-2 border">
       {% for message in messages %}
-      <div class="alert">{{ message.tags }}
-        fade show" id="msg" role="alert">
+      <div class="alert fade show" id="msg" role="alert">{{ message.tags }}
         {{ message | safe }}
-        <button type="button" class="btn-close"
-          data-bs-dismiss="alert" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       {% endfor %}
-      </div>
     </div>
-  </div>    
+  </div>
+</div>
 </div>
 
 {% endblock content %}

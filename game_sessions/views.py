@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic
 from django.contrib import messages
-from .models import Post
+from django.http import HttpResponseRedirect
+from .models import Post, Comment
 from .forms import CommentForm
 
 
@@ -47,13 +48,34 @@ class Game_session_List(generic.ListView):
             "joined_status":0,
             }
     )
+def comment_edit(request, slug, comment_id):
+    """
+    edit comments
+    """
+    if request.method == "POST":
 
-    def delete_view(request, post_id):
-        post = get_object_or_404(Post, slug=post_id)
-        if request.method == "POST":
-            post.delete()
+        queryset = Post.objects.filter()
+        post = get_object_or_404(queryset, slug=slug)
+        comment = get_object_or_404(Comment, pk=comment_id)
+        comment_form = CommentForm(data=request.POST, instance=comment)
+
+        if comment_form.is_valid() and comment.author == request.user:
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.approved = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+    #def delete_view(request, post_id):
+    #    post = get_object_or_404(Post, slug=post_id)
+    #    if request.method == "POST":
+    #        post.delete()
             # Optionally, you can add a success message here
             # messages.success(request, "Post deleted successfully.")
-            return redirect("post_list.html")  # Redirect to your list view
-        return render(request, "your_template_for_delete_confirmation.html", {"post": post})
+    #        return redirect("post_list.html")  # Redirect to your list view
+    #    return render(request, "your_template_for_delete_confirmation.html", {"post": post})
    
