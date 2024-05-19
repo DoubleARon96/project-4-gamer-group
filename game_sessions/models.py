@@ -42,4 +42,4 @@ class Comment(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return f"{self.title} | Made by {self.gamer_tag}"
+        return f"{self.body} | Made by {self.gamer_tag}"
