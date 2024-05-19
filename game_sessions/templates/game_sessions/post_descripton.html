@@ -45,19 +45,20 @@
 <!-- Comments -->
 <!-- Displaying Comments -->
 <div class="row text-center">
-  <div class="col-md-12 card">
+  <div class="col-md-10 card m-3">
       <h3>Questions:</h3>
-      <div class="card-body col-10">
+      <div class="card-body col-12">
           <!-- Your loop goes here -->
           {% for comment in comments %}
               <div class="{% if not comment.approved and comment.author == user %}faded{% elif not comment.approved %}d-none{% endif %}">
                   <p class="font-weight-bold">
                       {{ comment.gamer_tag }}
-                      <span class="font-weight-normal">{{ comment.updated_on }}</span> wrote:
+                      wrote:
                   </p>
                   <div id="comment{{ comment.id }}">
                       {{ comment.body | linebreaks }}
                   </div>
+                  <span class="font-weight-normal">{{ comment.updated_on }}</span>
                   {% if not comment.approved and comment.gamer_tag == user %}
                       <p class="approval">This Needs Approving</p>
                   {% endif %}
