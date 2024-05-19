@@ -43,94 +43,54 @@
   </div>
 </div>
 <!-- Comments -->
-<div class="row">
-  <div class="col-md-8 card">
-    <h3>Questions:</h3>
-    <div class="card-body">
-      {% for comment in comments %}
-      <div class="p-2 comments
-          {% if not comment.approved and comment.author == user %}
-          faded{% elif not comment.approved %} d-none{% endif %}">
-        <p class="font-weight-300">
-          {{ comment.gamer_tag }}
-          <span class="font-weight-normal">
-            {{ comment.created_on }}
-          </span> wrote:
-        </p>
-        <div id="comment{{ comment.id }}">
-          {{ comment.body | linebreaks }}
-        </div>
-        {% if not comment.approved and comment.author == user %}
-        <p class="approval">
-          All comments will be checked and approved
-        </p>
-        {% endif %}
-      </div>
-      <!--count for comments -->
-      <div class="row">
-        <div class="col-12">
-          <strong class="text-secondary">
-            <i class="far fa-comments"></i> {{ comment_count }}
-          </strong>
-        </div>
-      </div>
-      <!-- Displaying Comments -->
-      <div class="row text-center">
-        <div class="col-md-12 card">
-          <h3>Questions:</h3>
-          <div class="card-body">
-            <!-- We want a for loop inside the empty control tags
-          to iterate through each comment in comments -->
-            {% for comment in comments %}
-            <div class="p-2 comments
-          {% if not comment.approved and comment.gamer_tag == user %}
-          text-muted p-2{% elif not comment.approved %} d-none{% endif %}">
-              <p class="font-weight-bold">
-                {{ comment.gamer_tag }}
-                <span class="font-weight-normal">
-                  {{ comment.updated_on }}
-                </span> wrote:
-              </p>
-              <div id="comment{{ comment.id }}">
-                {{ comment.body | linebreaks }}
+<!-- Displaying Comments -->
+<div class="row text-center">
+  <div class="col-md-12 card">
+      <h3>Questions:</h3>
+      <div class="card-body col-10">
+          <!-- Your loop goes here -->
+          {% for comment in comments %}
+              <div class="{% if not comment.approved and comment.author == user %}faded{% elif not comment.approved %}d-none{% endif %}">
+                  <p class="font-weight-bold">
+                      {{ comment.gamer_tag }}
+                      <span class="font-weight-normal">{{ comment.updated_on }}</span> wrote:
+                  </p>
+                  <div id="comment{{ comment.id }}">
+                      {{ comment.body | linebreaks }}
+                  </div>
+                  {% if not comment.approved and comment.gamer_tag == user %}
+                      <p class="approval">This Needs Approving</p>
+                  {% endif %}
+                  {% if user.is_authenticated and comment.author == user %}
+                      <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
+                      <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+                  {% endif %}
               </div>
-              {% if not comment.approved and comment.gamer_tag == user %}
-              <p class="approval">
-                This Needs Approving
-              </p>
-              {% endif %}
-            </div>
-            <!-- Our for loop ends here -->
-              {% endfor %}
-              <div class="col-12">
-                {% if user.is_authenticated and comment.author == user %}
-                <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
-                <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
-                {% endif %}
-        </div>
+              <hr>
+          {% endfor %}
+          <!-- End of your loop -->
       </div>
-      <!-- Our for loop ends here -->
-      {% endfor %}
-    </div>
   </div>
 </div>
-<!-- Creating New questions -->
-<div class="col-md-11 card  text-center">
-  <input type="checkbox" id="questions_input" name="questions" value="questions">
-  <label for="comment_form" class="questions_label fs-2 text-hover">Have a Questions ?</label>
-  <div class="col toggle_none">
-    <div class="card-body toggle_none ">
-      {% if user.is_authenticated %}
-      <h3>Leave a comment:</h3>
-      <p>Posting as: {{ user.username }}</p>
-      <form id="commentForm" method="post" style="margin-top: 1.3em;">
-        {{ comment_form | crispy }}
-        {% csrf_token %}
-        <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-      </form>
-      {% else %}
-      <p>Log in to leave a comment</p>
-      {% endif %}
+
+  <!-- Creating New questions -->
+  <div class="col-md-11 card text-center">
+    <input type="checkbox" id="questions_input" name="questions" value="questions">
+    <label for="comment_form" class="questions_label fs-2 text-hover">Have a Questions ?</label>
+    <div class="col toggle_none">
+      <div class="card-body toggle_none ">
+        {% if user.is_authenticated %}
+        <h3>Leave a comment:</h3>
+        <p>Posting as: {{ user.username }}</p>
+        <form id="commentForm" method="post" style="margin-top: 1.3em;">
+          {{ comment_form | crispy }}
+          {% csrf_token %}
+          <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+        </form>
+        {% else %}
+        <p>Log in to leave a comment</p>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
@@ -146,7 +106,6 @@
       {% endfor %}
     </div>
   </div>
-</div>
 </div>
 
 {% endblock content %}

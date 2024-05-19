@@ -50,9 +50,7 @@ class Game_session_List(generic.ListView):
     )
 
 def edit_comment(request, slug, comment_id,Post):
-    """
-    edit comments
-    """
+    #this function lets you edit
     if request.method == "POST":
 
         queryset = Post.objects.filter()
@@ -73,6 +71,7 @@ def edit_comment(request, slug, comment_id,Post):
 
 
 def delete_comment(request, post_id):
+    #this lets you delete the comment
     post = get_object_or_404(Post, slug=post_id)
 
     if request.method == "POST":
