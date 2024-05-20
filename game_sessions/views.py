@@ -67,7 +67,7 @@ def edit_comment(request, slug, comment_id,Post):
         else:
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('post_descripton', args=[slug]))
 
 
 def delete_comment(request, post_id):
@@ -81,7 +81,7 @@ def delete_comment(request, post_id):
     else:
         messages.add_message(request, messages.ERROR, 'Error updating comment!')
         
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('post_descripton', args=[slug]))
     #        return redirect("post_list.html")  # Redirect to your list view
     #    return render(request, "your_template_for_delete_confirmation.html", {"post": post})
    

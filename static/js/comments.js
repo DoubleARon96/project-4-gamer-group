@@ -12,3 +12,17 @@ for (let button of editButtons) {
     commentForm.setAttribute("action", `edit_comment/${commentId}`);
   });
 }
+
+$(".btn-delete").on("click", function() {
+  const commentId = $(this).data("comment_id");
+  $.ajax({
+      url: `/delete-comment/${commentId}/`,  // URL to your delete_comment view
+      method: "POST",
+      success: function(response) {
+          // Handle success (e.g., remove the comment from the UI)
+      },
+      error: function(error) {
+          // Handle error
+      }
+  });
+});
