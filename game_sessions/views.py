@@ -48,6 +48,18 @@ class Game_session_List(generic.ListView):
             "joined_status":0,
             }
     )
+def update_player_count(request, post_id, action):
+    post = get_object_or_404(Post, slug=post_id)
+
+    if action == 'increment':
+        Post.player_count += 1
+    elif action == 'decrement':
+        Post.player_count -= 1
+
+    post.save()
+    return HttpResponseRedirect('/index.html/')
+
+
 
 def edit_comment(request, slug, comment_id,Post):
     #this function lets you edit

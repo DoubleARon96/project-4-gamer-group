@@ -13,19 +13,32 @@
                             <p class="author">Gamer: {{ post.gamer_tag }}</p>
                         </div>
                     </div>
-                    <a href="{% url 'post_description' post.post_id %}" class="post-link">
+                    <a href="{% url 'post_description' post.slug %}" class="post-link">
                         <h2 class="card-title">{{ post.title }}</h2>
                     </a>
                     <hr />
                     <p class="card-text text-muted h6">{{ post.updated_on}}
                     </p>
                     <hr />
+                    <!--this is letting the site run still needs fixing-->
+                    {% if update_player_count >= player_count %}
                     <p class="card-text text-muted h6">Spaces Availible: {{post.player_count}}</p>
-                    <p id="players_joined">0</p>
+                    <form method="post" action="{% url 'update_player_count' post.slug 'increment' %}">
+                        {% csrf_token %}
+                        <button type="submit">leave</button>
+                    </form>
+                    
+                    <form method="post" action="{% url 'update_player_count' post.slug_id 'decrement' %}">
+                        {% csrf_token %}
+                        <button type="submit">Join</button>
+                    </form>
+                    {% else %}
+                    {% endif %}
+                    <p>Player Count: {{ player_count }}</p>
+                    <p>Spaces Availible: {{post.player_count}}</p>
                     <br>
                     <form method="post">
                     <input type="button" value="player joined" placeholder="Join">
-                    <input type="button" value="player leave" placeholder="Leave">
                     </form>
                 </div>
             </div>
