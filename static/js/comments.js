@@ -24,7 +24,7 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 
 for (let button of deleteButtons) {
   button.addEventListener("click", (a) => {
-    const domDeleteModal= document.getElementById("deleteModal")
+  
     console.log("delete clicked")
     let commentId = a.target.dataset.comment_id;
     deleteConfirm.href = `delete_comment/${commentId}`;
