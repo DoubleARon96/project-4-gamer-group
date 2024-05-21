@@ -61,12 +61,12 @@ def update_player_count(request, post_id, action):
 
 
 
-def edit_comment(request, slug, comment_id,Post):
+def edit_comment(request, comment_id,post_id):
     #this function lets you edit
     if request.method == "POST":
 
         queryset = Post.objects.filter()
-        post = get_object_or_404(queryset, slug=slug)
+        post = get_object_or_404(queryset, slug=post_id)
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
 
@@ -79,10 +79,50 @@ def edit_comment(request, slug, comment_id,Post):
         else:
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
 
+    return HttpResponseRedirect(reverse('post_descripton', args=[post_id]))
+
+#def comment_edit(request, slug, comment_id):
+    """
+    view to edit comments
+    """
+    if request.method == "POST":
+
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comment = get_object_or_404(Comment, pk=comment_id)
+        comment_form = CommentForm(data=request.POST, instance=comment)
+
+        if comment_form.is_valid() and comment.author == request.user:
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.approved = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
     return HttpResponseRedirect(reverse('post_descripton', args=[slug]))
 
 
-def delete_comment(request, post_id):
+
+def comment_delete(request, slug, comment_id):
+    """
+    view to delete comment
+    """
+    queryset = Post.objects.filter(status=1)
+    post = get_object_or_404(queryset, slug=slug)
+    comment = get_object_or_404(Comment, pk=comment_id)
+
+    if comment.author == request.user:
+        comment.delete()
+        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+
+    return HttpResponseRedirect(reverse('post_descripton', args=[post]))
+
+
+#def delete_comment(request, post_id):
     #this lets you delete the comment
     post = get_object_or_404(Post, slug=post_id)
 

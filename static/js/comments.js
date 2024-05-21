@@ -3,10 +3,9 @@ const commentText = document.getElementById("id_body");
 const commentForm = document.getElementById("commentForm");
 const submitButton = document.getElementById("submitButton");
 
-
 for (let button of editButtons) {
-  button.addEventListener("click", (e) => {
-    let commentId = e.target.getAttribute("comment_id");
+  button.addEventListener("click", (a) => {
+    let commentId = a.target.getAttribute("comment_id");
     let commentContent = document.getElementById(`comment${commentId}`).innerText;
     commentText.value = commentContent;
     submitButton.innerText = "Update";
