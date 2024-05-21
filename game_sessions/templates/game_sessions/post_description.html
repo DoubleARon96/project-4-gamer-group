@@ -50,7 +50,7 @@
       <div class="card-body col-12">
           <!-- Your loop goes here -->
           {% for comment in comments %}
-              <div class="{% if not comment.approved and comment.author == user %}faded{% elif not comment.approved %}d-none{% endif %}">
+              <div class="{% if not comment.approved and comment.gamer_tag == user %}faded{% elif not comment.approved %}d-none{% endif %}">
                   <p class="font-weight-bold">
                       {{ comment.gamer_tag }}
                       wrote:
@@ -60,7 +60,7 @@
                   </div>
                   <span class="font-weight-normal">{{ comment.updated_on }}</span>
                   {% if not comment.approved and comment.gamer_tag == user %}
-                      <p class="approval">This Needs Approving</p>
+                      <p class="approval font-weight-bold">This Needs Approving <i class="fa-solid fa-circle-xmark"></i></p>
                   {% endif %}
                   {% if user.is_authenticated and comment.gamer_tag == user %}
                       <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
@@ -108,7 +108,30 @@
     </div>
   </div>
 </div>
-
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1"
+  aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"
+          id="deleteModalLabel">Delete Question?</h5>
+        <button type="button" class="btn-close"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your Question?
+        This action cannot be undone.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"
+          data-bs-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="#" class="btn
+          btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock content %}
 
 {% block extras %}

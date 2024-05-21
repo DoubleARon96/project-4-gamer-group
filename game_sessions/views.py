@@ -39,7 +39,7 @@ class Game_session_List(generic.ListView):
 
 
         return render(request,
-            "game_sessions/post_descripton.html",
+            "game_sessions/post_description.html",
             {
             "post": post,
             "comments": comments,
@@ -70,7 +70,7 @@ def edit_comment(request, comment_id,post_id):
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
 
-        if comment_form.is_valid() and comment.author == request.user:
+        if comment_form.is_valid() and comment.gamer_tag == request.user:
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.approved = False
@@ -79,61 +79,22 @@ def edit_comment(request, comment_id,post_id):
         else:
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
 
-    return HttpResponseRedirect(reverse('post_descripton', args=[post_id]))
+    return HttpResponseRedirect(reverse('post_description', args=[post_id]))
 
-#def comment_edit(request, slug, comment_id):
-    """
-    view to edit comments
-    """
-    if request.method == "POST":
-
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
-        comment = get_object_or_404(Comment, pk=comment_id)
-        comment_form = CommentForm(data=request.POST, instance=comment)
-
-        if comment_form.is_valid() and comment.author == request.user:
-            comment = comment_form.save(commit=False)
-            comment.post = post
-            comment.approved = False
-            comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
-        else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
-
-    return HttpResponseRedirect(reverse('post_descripton', args=[slug]))
-
-
-
-def comment_delete(request, slug, comment_id):
+def comment_delete(request, post_id, comment_id):
     """
     view to delete comment
     """
-    queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+    queryset = Post.objects.filter()
+    post = get_object_or_404(queryset, slug=post_id)
     comment = get_object_or_404(Comment, pk=comment_id)
 
-    if comment.author == request.user:
+    if comment.gamer_tag == request.user:
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
-    return HttpResponseRedirect(reverse('post_descripton', args=[post]))
+    return HttpResponseRedirect(reverse('post_description', args=[post_id]))
 
-
-#def delete_comment(request, post_id):
-    #this lets you delete the comment
-    post = get_object_or_404(Post, slug=post_id)
-
-    if request.method == "POST":
-        post.delete()
-        slug = post_id
-        messages.add_message(request, messages.SUCCESS, 'deleted!')
-    else:
-        messages.add_message(request, messages.ERROR, 'Error updating comment!')
-        
-    return HttpResponseRedirect(reverse('post_descripton', args=[slug]))
-    #        return redirect("post_list.html")  # Redirect to your list view
-    #    return render(request, "your_template_for_delete_confirmation.html", {"post": post})
    
