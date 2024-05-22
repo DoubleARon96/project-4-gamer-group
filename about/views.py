@@ -18,6 +18,27 @@ def about_list(request):
 def about_form(request):
     content = aboutForm
     viewbag = {about_form:content}
+
+    if request.method == "POST":
+            about_Form = aboutForm(data=request.POST)
+            if about_Form.is_valid():
+                about = about_Form.save(commit=False)
+                about.gamer_tag = request.user
+                about.save()
+                messages.add_message(
+                request, messages.SUCCESS,
+        'story Is Just Going To Be Checked '
+    )
+    about_Form = aboutForm()
+
+
+    return render(request,
+            "about_base",
+            {
+            "about_form": about_Form,
+            }
+    )
+    
     return render(request, "about/about_base.html", viewbag)
 
 
