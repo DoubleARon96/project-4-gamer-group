@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+{% load crispy_forms_tags %}
 
 
 <div class="col-12 mt-3 left">
@@ -18,11 +19,36 @@
                     <p class="card-text h6">{{content.stories| safe}}</p>
                     <p class="text-muted">{{content.updated_on}}</p>
                     {% endfor %}
+                    {% if user.is_authenticated and gamer_tag == superuser %}
+                      <button class="btn btn-delete" data-stories_id="{{ stories.id }}">Delete</button>
+                      <button class="btn btn-edit" data-stories_id="{{ stories.id }}">Edit</button>
+                    {% endif %}
                 </div>
             </div>
         </div>
     </div>
+    <!--needs Finishing-->
+    {% if user.is_authenticated and gamer_tag == superuser %}
     <div class="row">
+        <div class="col-md-11 card text-center ">
+            <input type="checkbox" id="questions_input" name="questions" value="questions">
+            <label for="about_form" class="questions_label fs-2 text-hover">Tell Us A Little about yourself</label>
+            <div class="col toggle_none">
+              <div class="card-body toggle_none ">
+                <h3>Story Here:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                  {{ about_form | crispy }}
+                  {% csrf_token %}
+                  <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% else %}
+                <p>Log in to leave a Story</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
 </div>
 </div>

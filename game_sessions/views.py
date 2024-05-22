@@ -61,7 +61,7 @@ def update_player_count(request, post_id, action):
 
 
 
-def edit_comment(request, comment_id,post_id):
+def edit_comment(request, comment_id, post_id):
     #this function lets you edit
     if request.method == "POST":
 
