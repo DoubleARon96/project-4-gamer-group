@@ -7,7 +7,7 @@ const submitButton = document.getElementById("submitButton");
 for (let button of editButtons) {
   button.addEventListener("click", (a) => {
     let commentId = a.target.dataset.comment_id;
-    let node = document.getElementById(`comment${commentId}`);
+    let node = document.getElementById(`comment${commentId}`).focus();
 
     let commentContent = node.innerText;
     commentText.value = commentContent;
