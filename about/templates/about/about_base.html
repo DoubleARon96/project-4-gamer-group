@@ -18,11 +18,11 @@
                     <hr />
                     <p class="card-text h6">{{content.stories| safe}}</p>
                     <p class="text-muted">{{content.updated_on}}</p>
-                    {% endfor %}
                     {% if request.user.is_superuser %}
-                      <button class="btn btn-delete" data-stories_id="{{ stories.id }}">Delete</button>
-                      <button class="btn btn-edit" data-stories_id="{{ stories.id }}">Edit</button>
+                      <button class="btn btn-delete" data-stories_id="{{ content.id }}">Delete</button>
+                      <button class="btn btn-edit" data-stories_id="{{ content.id }}">Edit</button>
                     {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -49,6 +49,30 @@
           </div>
         </div>
     </div>
+</div>
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1"
+  aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"
+          id="deleteModalLabel">Delete Question?</h5>
+        <button type="button" class="btn-close"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your Question?
+        This action cannot be undone.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"
+          data-bs-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="#" class="btn
+          btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 {% if is_paginated %}

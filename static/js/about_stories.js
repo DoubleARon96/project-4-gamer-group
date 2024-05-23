@@ -17,3 +17,18 @@ for (let button of editButtons) {
 }
 
 
+const deleteButtons = document.getElementsByClassName("btn-delete");
+var myModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+console.log(deleteButtons)
+const deleteConfirm = document.getElementById("deleteConfirm");
+
+for (let button of deleteButtons) {
+  button.addEventListener("click", (a) => {
+  
+    console.log("delete clicked")
+    let stories_id = a.target.dataset.stories_id;
+    deleteConfirm.href = `delete_story/${stories_id}/`;
+    myModal.show();
+  });
+}
+
