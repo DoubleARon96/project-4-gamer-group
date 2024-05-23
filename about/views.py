@@ -7,17 +7,17 @@ from django.contrib.admin.views.decorators import staff_member_required
 from .models import AdminStory
 from .forms import aboutForm
 
-class About (generic.ListView):
-    queryset = AdminStory.objects.all()
-    template = "about/about_base.html"
-    paginate_by = 1
-    def about_list(request):
-        """
-        Renders the About page
-        """
-        content = AdminStory.objects.all
-        viewbag = { "contents": content }
-        return render(request, "about/about_base.html", viewbag)
+#class About (generic.ListView):
+    #queryset = AdminStory.objects.all()
+    #template = "about/about_base.html"
+    #paginate_by = 1
+def about_list(request):
+    """
+    Renders the About page
+    """
+    content = AdminStory.objects.all
+    viewbag = { "contents": content }
+    return render(request, "about/about_base.html", viewbag)
 
 def about_form(request):
     content = aboutForm
