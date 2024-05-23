@@ -13,6 +13,10 @@ class Post(models.Model):
         ('VR Chat', 'VR Chat'),
         ('Call Of Duty', 'Call Of Duty'),
         ('Other', 'Other'),
+        ('Apex L', 'Apex Legends'),
+        ('Forza M', 'Forza Motasports'),
+        ('Forza H', 'Forza Horizon'),
+        ('Dead By Daylight', 'Dead By Daylight')
     )
 
 
