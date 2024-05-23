@@ -39,44 +39,90 @@ Happy coding!
 
 ### Game Together
 
-# Introduction
+## Introduction
 
-Visit the Website Here
+# Visit the Website Here
 
-Visit the Project's GitHub Repository Here
+# Visit the Project's GitHub Repository Here
+[](https://github.com/DoubleARon96/project-4-gamer-group)
 
-Responsive Image
+# Responsive Image
 
-Website Highlights
+# Website Highlights
 
-Table of Contents
-UX
-Strategy
-Purpose
-User Stories
-For This Sprint
-For Future Sprints
+
+## UX
+the UX is a main part of the site by making it simple and easy to understand parts of the ux are 
+* Strategy
+* Scope
+* Structure
+* Skeleton
+* Surface
+
+# Strategy
+![frameplan](/workspace/project-4-gamer-group/assests/readme_images/plan-data-a.png)
+
+![rough-plan](/workspace/project-4-gamer-group/assests/readme_images/rough-plan.jpg)
+
+When planning the site I could relate to the group i am aiming to draw in.
+
+so when planning i thought about how i struggle to play groupe games now because all my friends have different hours, so i thought if i could make a site that can be assessed at anytime and responses don't have to be instant.
+
+Target audience :
+* 18 to 50 years old 
+* people that are working full time and have not a lot of spare time.
+* people that like to game in groups 
+
+
+# Purpose
+the purpose of this website it to be able to bring people together in a controlled and monitored way while gaming.
+the plan is to make it easier for people like me that don't have much spare time to game and when they do they cant find anyone to play with, so with this i added functions to the site so that admins and superusers can make sessions and only registered people can join for extra protection.
+
+# User Stories
+
+# For the Future
+the future i plan to add more interactivity like an voice chat to the sessions the users will be able to post images from games and have a profile with a logo or profile picture.
 Scope
-Sprint 1
-Sprint 2
-Future Sprints
-Structure
-Project Applications
-Project Databases
-WebsiteUser
-Ticket
-Surface
-Font
-Icons
-Colours
-Responsive Screens
-Features
-Existing Features
-Landing Page
-Navigation Bar
 
-Django Template Pages
-Messages
+
+# Structure
+
+# Project Applications
+
+# Project Databases
+![db_plan](assests/readme_images/plan-data-c.png)
+this was my origanl plan for the data bases but lack of time i have streamlimed the data bases to fit into one.
+
+# Accounts 
+the accounts are the authentication so users can get around the site and if they dont meet the requirements they wont be able to get around the site.
+
+# Posts/Sessions
+within this it will hold the users data that made it and will have players that leave questions in the question part, it will also store the game , the amount of players and a brief description of what the host has planned 
+
+# Surface
+
+# Font
+sadly I haven't added a basic font to the website.
+
+# Icons
+Icons i used where from font awesome
+
+# Colours
+i choose the green white and black because the glow makes it feels more game like and simple colours so its not hard to see or read the text 
+
+# Responsive Screens
+i made the site responsive with the help of bootstrap because of the columns and being able to make it fit the page no matter what screen the user is using.
+
+# Features
+
+  # Landing Page
+
+  # Navigation Bar
+
+  # Questions
+
+# Django Template Pages
+ 
 Error Pages
 Technologies Used
 Languages
