@@ -3,17 +3,21 @@ from django.views import generic
 from django.contrib import messages
 from django.shortcuts import render, get_object_or_404,reverse
 from django.http import HttpResponseRedirect
+from django.contrib.admin.views.decorators import staff_member_required
 from .models import AdminStory
 from .forms import aboutForm
 
-
-def about_list(request):
-    """
-    Renders the About page
-    """
-    content = AdminStory.objects.all()
-    viewbag = { "contents": content }
-    return render(request, "about/about_base.html", viewbag)
+class About (generic.ListView):
+    queryset = AdminStory.objects.all()
+    template = "about/about_base.html"
+    paginate_by = 1
+    def about_list(request):
+        """
+        Renders the About page
+        """
+        content = AdminStory.objects.all
+        viewbag = { "contents": content }
+        return render(request, "about/about_base.html", viewbag)
 
 def about_form(request):
     content = aboutForm
@@ -41,7 +45,7 @@ def about_form(request):
     
 
 
-
+@staff_member_required
 def edit_story(request, story_id, gamer_tag):
     #this function lets you edit
     if request.method == "POST":

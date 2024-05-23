@@ -19,7 +19,7 @@
                     <p class="card-text h6">{{content.stories| safe}}</p>
                     <p class="text-muted">{{content.updated_on}}</p>
                     {% endfor %}
-                    {% if user.is_authenticated and gamer_tag == superuser %}
+                    {% if request.user.is_superuser %}
                       <button class="btn btn-delete" data-stories_id="{{ stories.id }}">Delete</button>
                       <button class="btn btn-edit" data-stories_id="{{ stories.id }}">Edit</button>
                     {% endif %}
@@ -28,7 +28,7 @@
         </div>
     </div>
     <!--needs Finishing-->
-    {% if user.is_authenticated and gamer_tag == superuser %}
+    {% if request.user.is_superuser %}
     <div class="row justify-content-center">
         <div class="col-md-11 card text-center ">
             <input type="checkbox" id="questions_input" name="questions" value="questions">
@@ -43,7 +43,6 @@
                   <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
                 {% else %}
-                <p>Log in to leave a Story</p>
                 {% endif %}
               </div>
             </div>
@@ -52,6 +51,22 @@
     </div>
 </div>
 </div>
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+    <li>
+        <a href="?page={{ page_obj.previous_page_number }}"
+          class="page-link">&laquo; BACK</a>
+    </li>
+    {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 
+<script src="{% static 'js/about_stories.js' %}"></script>
 <!-- index.html content ends here -->
 {% endblock %}
