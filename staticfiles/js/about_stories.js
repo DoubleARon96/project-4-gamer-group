@@ -1,18 +1,18 @@
 const editButtons = document.getElementsByClassName("btn-edit");
 const commentText = document.getElementById("id_body");
-const commentForm = document.getElementById("commentForm");
+const aboutForm = document.getElementById("aboutForm");
 const submitButton = document.getElementById("submitButton");
 
 
 for (let button of editButtons) {
   button.addEventListener("click", (a) => {
-    let commentId = a.target.dataset.comment_id;
-    let node = document.getElementById(`comment${commentId}`).focus();
+    let stories_id = a.target.dataset.stories_id;
+    let node = document.getElementById(`stories${stories_id}`);
 
-    let commentContent = node.innerText;
-    commentText.value = commentContent;
+    let storiesContent = node.innerText;
+    commentText.value = storiesContent;
     submitButton.innerText = "Update";
-    commentForm.setAttribute("action", `edit_comment/${commentId}/`);
+    commentForm.setAttribute("action", `edit_story/${stories_id}/`);
   });
 }
 
@@ -26,8 +26,9 @@ for (let button of deleteButtons) {
   button.addEventListener("click", (a) => {
   
     console.log("delete clicked")
-    let commentId = a.target.dataset.comment_id;
-    deleteConfirm.href = `delete_comment/${commentId}`;
+    let stories_id = a.target.dataset.stories_id;
+    deleteConfirm.href = `delete_story/${stories_id}/`;
     myModal.show();
   });
 }
+
