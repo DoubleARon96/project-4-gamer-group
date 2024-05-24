@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404,reverse
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -6,16 +6,10 @@ from .models import Post, Comment
 from .forms import CommentForm
 
 
-
-
-
-
 class Game_session_List(generic.ListView):
     queryset = Post.objects.all()
     template_name = "game_sessions/index.html"
     paginate_by = 3
-
-
 
     def post_description(request, post_id):
 
@@ -31,22 +25,22 @@ class Game_session_List(generic.ListView):
                 comment.post = post
                 comment.save()
                 messages.add_message(
-                request, messages.SUCCESS,
-        'Comment Is Just Going To Be Checked '
-    )
+                    request, messages.SUCCESS,
+                    'Comment Is Just Going To Be Checked ')
         comment_form = CommentForm()
 
-
         return render(request,
-            "game_sessions/post_description.html",
-            {
-            "post": post,
-            "comments": comments,
-            "comment_count": comment_count,
-            "comment_form": comment_form,
-            "joined_status":0,
-            }
-    )
+                      "game_sessions/post_description.html",
+                      {
+                       "post": post,
+                       "comments": comments,
+                       "comment_count": comment_count,
+                       "comment_form": comment_form,
+                       "joined_status": 0,
+                        }
+                      )
+
+
 def update_player_count(request, post_id, action):
     post = get_object_or_404(Post, slug=post_id)
 
@@ -59,10 +53,9 @@ def update_player_count(request, post_id, action):
     return HttpResponseRedirect('/index.html/')
 
 
-
 def edit_comment(request, comment_id, post_id):
     """
-    This function is the view behind the edit function 
+    This function is the view behind the edit function
     """
     if request.method == "POST":
 
@@ -76,11 +69,13 @@ def edit_comment(request, comment_id, post_id):
             comment.post = post
             comment.approved = False
             comment.save()
-                
+
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(request, messages.ERROR,
+                                 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_description', args=[post_id]))
+
 
 def comment_delete(request, post_id, comment_id):
     """
@@ -94,8 +89,7 @@ def comment_delete(request, post_id, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(request, messages.ERROR,
+                             'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_description', args=[post_id]))
-
-   
