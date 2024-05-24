@@ -1,8 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
+
 class AdminStory (models.Model):
+    """
+    this is the model that stores the admin stories
+    """
     title = models.CharField(max_length=200)
     author = models.ForeignKey(User, on_delete=models.CASCADE,)
     stories = models.TextField (unique=True)

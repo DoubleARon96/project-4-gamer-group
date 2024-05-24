@@ -20,26 +20,9 @@
                     <p class="card-text text-muted h6">{{ post.updated_on}}
                     </p>
                     <hr />
-                    <!--this is letting the site run still needs fixing-->
-                    {% if update_player_count >= player_count %}
-                    <p class="card-text text-muted h6">Spaces Availible: {{post.player_count}}</p>
-                    <form method="post" action="{% url 'update_player_count' post.slug 'increment' %}">
-                        {% csrf_token %}
-                        <button type="submit">leave</button>
-                    </form>
-                    
-                    <form method="post" action="{% url 'update_player_count' post.slug_id 'decrement' %}">
-                        {% csrf_token %}
-                        <button type="submit">Join</button>
-                    </form>
-                    {% else %}
-                    {% endif %}
-                    <p>Player Count: {{ player_count }}</p>
+                    <!--this is a work in progress -->
                     <p>Spaces Available: {{post.player_count}}</p>
                     <br>
-                    <form method="post">
-                    <input type="button" value="player joined" placeholder="Join">
-                    </form>
                 </div>
             </div>
         </div>

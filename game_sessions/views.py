@@ -12,7 +12,6 @@ from .forms import CommentForm
 
 class Game_session_List(generic.ListView):
     queryset = Post.objects.all()
-    #template_name = "post_list.html"
     template_name = "game_sessions/index.html"
     paginate_by = 3
 
@@ -62,7 +61,9 @@ def update_player_count(request, post_id, action):
 
 
 def edit_comment(request, comment_id, post_id):
-    #this function lets you edit
+    """
+    This function is the view behind the edit function 
+    """
     if request.method == "POST":
 
         queryset = Post.objects.filter()

@@ -7,10 +7,6 @@ from django.contrib.admin.views.decorators import staff_member_required
 from .models import AdminStory
 from .forms import aboutForm
 
-#class About (generic.ListView):
-    #queryset = AdminStory.objects.all()
-    #template = "about/about_base.html"
-    #paginate_by = 1
 def about_list(request):
     """
     Renders the About page
@@ -64,6 +60,9 @@ def about_form(request):
 
 @staff_member_required
 def edit_story(request, id, gamer_tag):
+    """
+    this function is to edit stories but still isn't full incorporate
+    """
     #this function lets you edit
     if request.method == "POST":
 
