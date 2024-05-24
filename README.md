@@ -175,16 +175,18 @@ This project utilises allauth to allow users to register, login, logout etc. on 
 ## Testing
 # Code Validation
 # W3C HTML Validator
+![html](assests/readme_images/html_val_1.png)
 
-W3C CSS Validator
-First Attempt of CSS Files
+# W3C CSS Validator
 
-Final Attempt of JavaScript Files
-Python Syntax Checker PEP8 Validation
-First Attempt of Python Files
-Final Attempt of Python Files
-Lighthouse
-Final Attempt for Lighthouse
+
+# Python Syntax Checker PEP8 Validation
+![python_val_1](assests/readme_images/python_val_1.png)
+![python_val_2](assests/readme_images/python_val_2.png)
+
+# Lighthouse
+![Lighthouse](assests/readme_images/lighthouse_1.png)
+
 Responsiveness
 Web Aim Contrast Checker
 
