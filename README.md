@@ -141,19 +141,34 @@ i made the site responsive with the help of bootstrap because of the columns and
 
 
 # Django Template Pages
+This project utilises allauth to allow users to register, login, logout etc. on the website and provides excellent out-of-the-box functionality.
  
-Error Pages
-Technologies Used
-Languages
-Tools
-Styling
-Validation
-Databases
-Testing
-Code Validation
-W3C HTML Validator
+## Technologies Used
+# Languages
+* HTML - To create the Django templates for the associated views and models in the project applications.
+* CSS - To style the website.
+* JavaScript - to handle the buttons that questions and to make a new story on the about page
+* Python – Is the primary language of Django and used to create all forms, models and views.
+# Tools
+* Django – The framework used in this project to join the databases with a website.
+* Crispy Forms – Formats the models into forms on webpages.
+* Gitpod – Used as the development environment.
+* GitHub – The project’s Version Control.
+* Heroku – To deploy the webpage.
+# Styling
+* Bootstrap – To provide extra styling and positioning.
+* Font Awesome – For the X's on the questions awaiting approval.
+# Validation
+* W3C HTML Validation Service – To validate all the HTML files, including the templates from Django itself, due to editing them.
+* W3C CSS Validation Service – To validate the “style.css” page as well as the specific css page made to create the 
+* JSHint – To validate the code within the “script.js” file.
+* Python Syntax Checker PEP8 – To validate all the Python files, making sure they align with PEP8.
+* Lighthouse – To check the website’s performance and accessibility, making sure the best practices are used.
+# Databases
 
-Only Attempt of the Django Templates
+## Testing
+# Code Validation
+# W3C HTML Validator
 
 W3C CSS Validator
 First Attempt of CSS Files
@@ -186,3 +201,7 @@ For Content and Code
 ## Bugs 
 # bug that are still there
 1. when making a game session you still have to write the post_id in the top one and the slug field second from the bottom
+
+## Credit
+Ciaran Merrit
+Harry Dhillon
