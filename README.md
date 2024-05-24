@@ -27,9 +27,9 @@ the UX is a main part of the site by making it simple and easy to understand par
 * Surface
 
 # Strategy
-![frameplan](/workspace/project-4-gamer-group/assests/readme_images/plan-data-a.png)
+![frame_plan](assests/readme_images/plan-data-a.png)
 
-![rough-plan](/workspace/project-4-gamer-group/assests/readme_images/rough-plan.jpg)
+![rough_plan](assests/readme_images/rough-plan.jpg)
 
 When planning the site I could relate to the group i am aiming to draw in.
 
@@ -190,14 +190,8 @@ to deploy the project you will need to follow these :
 * Scroll down to the bottom of the “Deploy” Page and select the type of deployment you want to do. If you opt to “Automatically Deploy”, it will deploy every time you push new code to your repository or you will have to manually deploy it, by selecting the button at the bottom of the page.
 The application is now deployed!
 
-Create Application
-ElephantSQL
-Cloudinary ??
-Final Repo Preparations
-Heroku Deploy
-Credits
 For Code Help and Advice
-Helpful Resources
+Helpful Resour/workspace/project-4-gamer-group/assestsces
 For Content and Code
  
 ## Bugs 
