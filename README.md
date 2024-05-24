@@ -135,7 +135,9 @@ This project utilises allauth to allow users to register, login, logout etc. on 
 * JSHint – To validate the code within the “script.js” file.
 * Python Syntax Checker PEP8 – To validate all the Python files, making sure they align with PEP8.
 * Lighthouse – To check the website’s performance and accessibility, making sure the best practices are used.
+
 # Databases
+* ElephantSQL – The final database used for the deployed project.
 
 ## Testing
 # Code Validation
@@ -154,14 +156,40 @@ This project utilises allauth to allow users to register, login, logout etc. on 
 ![Lighthouse](assests/readme_images/lighthouse_1.png)
 
 Responsiveness
-Web Aim Contrast Checker
 
-Manual Testing
+# Manual Testing
 Automated Testing
-Bugs
 Resolved
 Unresolved
-Deployment
+# Deployment
+to deploy the project you will need to follow these :
+
+1. Create Application
+* Create a Heroku account if you don’t have one and login.
+* Create a new application, by selecting the “new” button on the top right of the dashboard and click “Create new app”.
+* Choose a unique name for the application and select the region you live in, followed by "Create App".
+ 
+2. ElephantSQL
+* Go to elephantsql.com, login with GitHub and create a new instance.
+* Copy the URL once the project has been created.
+* Install the dj-database-url package version 0.5.0 by using [pip3 install dj_database_url==0.5.0] to format the URL into one that Django can use, and don't forget to [pip freeze > requirements.txt].
+ 
+3. Repo Preparations
+* Make sure to make any migrations in the project, by typing [python3 manage.py makemigrations] followed by python3 [manage.py migrate] into the terminal.
+* make a Procfile, which contains web: gunicorn [project_name].wsgi:application is added to the project.
+ 
+4. Heroku Deploy
+* Go back to Heroku and when the Project’s page opens up, go to the "settings" tab and scroll down to the “Config Vars” section.
+* Enter the following key-value pairs in the “Config Vars” section:
+* Key = PORT : Value = 8000
+* Key = SECRET_KEY : Value = Django Secret Key value obtained from settings.py
+* Key = DATABASE_URL : Value = ElephantSQL URL From the website.
+
+* Go to the “Deploy” tab next and scroll down to the GitHub deployment method.
+* Search for the sight repository and then connect to it by selecting the “Connect” button.
+* Scroll down to the bottom of the “Deploy” Page and select the type of deployment you want to do. If you opt to “Automatically Deploy”, it will deploy every time you push new code to your repository or you will have to manually deploy it, by selecting the button at the bottom of the page.
+The application is now deployed!
+
 Create Application
 ElephantSQL
 Cloudinary ??
