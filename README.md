@@ -1,56 +1,21 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome,
-
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
-
-## GitPod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
-
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
-
 ### Game Together
 
 ## Introduction
+Welcome 
+thank you for looking throught the ReadMe.
+the Game together project is a personal one to help fill a need i felt that was needed. this project is a basic and simple idea, like the project its self the layout and logic is simple to run on this project, the plan is to make a platform that can bring adults and young adults together by making gaming in groups more of an easy task.
+
 
 # Visit the Website Here
 
 # Visit the Project's GitHub Repository Here
-[](https://github.com/DoubleARon96/project-4-gamer-group)
+[link](https://github.com/DoubleARon96/project-4-gamer-group)
 
 # Responsive Image
 
 # Website Highlights
 ![home](assests/readme_images/Screenshot_6.png)
-![](assests/readme_images/Screenshot_5.png)
+![sessions](assests/readme_images/Screenshot_5.png)
 
 
 ## UX
@@ -130,14 +95,14 @@ i made the site responsive with the help of bootstrap because of the columns and
 
   # Home Page
   the home page has a welcome message on to from the admins this will change manually by the admin throughout the year for different seasons 
-  [home page](assests/readme_images/Screenshot_6.png)
+  ![home page](assests/readme_images/Screenshot_6.png)
 
   # Navigation Bar
   the nav bar will change depending on if you have logged in or not. this is to stop non account holders from leaving messages without being able to find out who did it for safety
 
   # Questions
   the question or comments are there to get a little more information from the users that made the game session, so you can ask what mode , mission or if they will host another session to.
-  [Questions](assests/readme_images/Screenshot_5.png)
+  ![Questions](assests/readme_images/Screenshot_5.png)
   # Approval
   ![question approved and not](assests/readme_images/approval_3.png)
   1. ![how to approve](assests/readme_images/approval_4.png)
@@ -178,6 +143,7 @@ This project utilises allauth to allow users to register, login, logout etc. on 
 ![html](assests/readme_images/html_val_1.png)
 
 # W3C CSS Validator
+![css](assests/readme_images/css_val_1.png)
 
 
 # Python Syntax Checker PEP8 Validation
@@ -209,6 +175,23 @@ For Content and Code
 ## Bugs 
 # bug that are still there
 1. when making a game session you still have to write the post_id in the top one and the slug field second from the bottom
+
+## GitPod Reminders
+
+To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+
+`python3 -m http.server`
+
+A button should appear to click: _Open Preview_ or _Open Browser_.
+
+To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+
+`http_server`
+
+To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+
+A button should appear to click: _Open Preview_ or _Open Browser_.
+
 
 ## Credit
 Ciaran Merrit
