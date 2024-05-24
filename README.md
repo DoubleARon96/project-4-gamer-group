@@ -138,6 +138,12 @@ i made the site responsive with the help of bootstrap because of the columns and
   # Questions
   the question or comments are there to get a little more information from the users that made the game session, so you can ask what mode , mission or if they will host another session to.
   [Questions](assests/readme_images/Screenshot_5.png)
+  # Approval
+  ![question approved and not](assests/readme_images/approval_3.png)
+  1. ![how to approve](assests/readme_images/approval_4.png)
+  2. ![login](assests/readme_images/approval_5.png)
+  3. ![selecting comment](assests/readme_images/approval_1.png)
+  4. ![approval](assests/readme_images/approval_2.png)
 
 
 # Django Template Pages
