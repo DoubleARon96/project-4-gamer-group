@@ -17,11 +17,6 @@
           <p class="card-text h6">{{content.stories| safe}}</p>
           <p class="text-muted">{{content.updated_on}}</p>
           {% if request.user.is_superuser %}
-          <div class="d-none">
-            <!--This is the edit and delete button for the about page still a work in progress-->
-            <button class="btn btn-delete" data-stories_id="{{ content.id }}">Delete</button>
-            <button class="btn btn-edit" data-stories_id="{{ content.id }}">Edit</button>
-          </div>
           {% endif %}
           {% endfor %}
         </div>
