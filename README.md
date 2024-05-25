@@ -12,8 +12,6 @@ the Game together project is a personal one to help fill a need i felt that was 
 # Visit the Project's GitHub Repository Here
 [Repo link](https://github.com/DoubleARon96/project-4-gamer-group)
 
-# Responsive Image
-
 # Website Highlights
 ![home](assests/readme_images/Screenshot_6.png)
 ![sessions](assests/readme_images/Screenshot_5.png)
@@ -232,6 +230,7 @@ A button should appear to click: _Open Preview_ or _Open Browser_.
 
 ## Credit
 Ciaran Merrit
-
+Code institue : i think blog
+Grawnya : helped by showing and amazing Readme layout
 
 Harry Dhillon
