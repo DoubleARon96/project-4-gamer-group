@@ -55,7 +55,7 @@ Scope
 
 
 ## Structure
-the structure of the project is a very basic layout so its easy to use and look thorugh the pagesand works with the databse so pages can be updated and changed from the admin page and all questions can be changed and and deleted.
+the structure of the project is a very basic layout so its easy to use and look through the page and works with the datable so pages can be updated and changed from the admin page and all questions can be changed and and deleted.
 
 # Project Databases
 ![db_plan](assests/readme_images/plan-data-c.png)
