@@ -5,71 +5,64 @@
 
 
 <div class="col-12 mt-3 left">
-    <div class="row">
-        <div class="col-md-12 text-center  border ">
-            <div class="card mb-4 ">
-                <div class="card-body">
-                    {% for content in contents %}
-                    <div class="image-container">
-                        <div class="image-flash">
-                        </div>
-                    </div>
-                        <h2 class="card-title">{{content.title}}</h2>
-                    <hr />
-                    <p class="card-text h6">{{content.stories| safe}}</p>
-                    <p class="text-muted">{{content.updated_on}}</p>
-                    {% if request.user.is_superuser %}
-                    <div class="d-none">
-                      <!--This is the edit and delete button for the about page still a work in progress-->
-                      <button class="btn btn-delete" data-stories_id="{{ content.id }}">Delete</button>
-                      <button class="btn btn-edit" data-stories_id="{{ content.id }}">Edit</button>
-                    </div>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--needs Finishing-->
-    {% if request.user.is_superuser %}
-    <div class="row justify-content-center">
-        <div class="col-md-11 card text-center ">
-            <h2 class="questions_label fs-2 text-hover">Tell Us A Little about yourself</h2>
-            <div class="col toggle_none">
-              <div class="card-body toggle_none ">
-                <h3>Story Here:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form id="commentForm" method="post" style="margin-top: 1.3em;">
-                  {{ about_form | crispy }}
-                  {% csrf_token %}
-                  <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-                {% else %}
-                {% endif %}
-              </div>
-            </div>
+  <div class="row">
+    <div class="col-md-12 text-center  border ">
+      <div class="card mb-4 ">
+        <div class="card-body">
+          {% for content in contents %}
+          <div class="image-container">
           </div>
+          <h2 class="card-title">{{content.title}}</h2>
+          <hr />
+          <p class="card-text h6">{{content.stories| safe}}</p>
+          <p class="text-muted">{{content.updated_on}}</p>
+          {% if request.user.is_superuser %}
+          <div class="d-none">
+            <!--This is the edit and delete button for the about page still a work in progress-->
+            <button class="btn btn-delete" data-stories_id="{{ content.id }}">Delete</button>
+            <button class="btn btn-edit" data-stories_id="{{ content.id }}">Edit</button>
+          </div>
+          {% endif %}
+          {% endfor %}
         </div>
+      </div>
     </div>
+  </div>
+  <!--needs Finishing-->
+  {% if request.user.is_superuser %}
+  <div class="row justify-content-center">
+    <div class="col-md-11 card text-center ">
+      <h2 class="questions_label fs-2 text-hover">Tell Us A Little about yourself</h2>
+      <div class="col toggle_none">
+        <div class="card-body toggle_none ">
+          <h3>Story Here:</h3>
+          <p>Posting as: {{ user.username }}</p>
+          <form id="commentForm" method="post" style="margin-top: 1.3em;">
+            {{ about_form | crispy }}
+            {% csrf_token %}
+            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+          </form>
+          {% else %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1"
-  aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"
-          id="deleteModalLabel">Delete Question?</h5>
-        <button type="button" class="btn-close"
-          data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="deleteModalLabel">Delete Question?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         Are you sure you want to delete your Question?
         This action cannot be undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"
-          data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <a id="deleteConfirm" href="#" class="btn
           btn-danger">Delete</a>
       </div>
