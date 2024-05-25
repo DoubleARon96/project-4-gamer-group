@@ -19,7 +19,6 @@ for (let button of editButtons) {
 
 const deleteButtons = document.getElementsByClassName("btn-delete");
 var myModal = new bootstrap.Modal(document.getElementById('deleteModal'));
-console.log(deleteButtons)
 const deleteConfirm = document.getElementById("deleteConfirm");
 
 for (let button of deleteButtons) {
