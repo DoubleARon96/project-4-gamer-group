@@ -2,7 +2,7 @@
 
 ## Introduction
 Welcome 
-thank you for looking throught the ReadMe.
+thank you for looking thought the ReadMe.
 the Game together project is a personal one to help fill a need i felt that was needed. this project is a basic and simple idea, like the project its self the layout and logic is simple to run on this project, the plan is to make a platform that can bring adults and young adults together by making gaming in groups more of an easy task.
 
 
@@ -59,10 +59,10 @@ the structure of the project is a very basic layout so its easy to use and look 
 
 # Project Databases
 ![db_plan](assests/readme_images/plan-data-c.png)
-this was my origanl plan for the data bases but i have adjusted it to work with the project now. there is three data bases one for the home page welcome message , the game sessions and the about page.
+this was my original plan for the data bases but i have adjusted it to work with the project now. there is three data bases one for the home page welcome message , the game sessions and the about page.
 
 # Accounts 
-the accounts are the authentication so users can get around the site and if they dont meet the requirements they wont be able to get around the site.
+the accounts are the authentication so users can get around the site and if they don't meet the requirements they wont be able to get around the site.
 
 # Posts/Sessions
 within this it will hold the users data that made it and will have players that leave questions in the question part, it will also store the game , the amount of players and a brief description of what the host has planned 
@@ -146,7 +146,7 @@ This project utilises allauth to allow users to register, login, logout etc. on 
 ## Testing
 # Code Validation
 # Js Hint
-I ran my file through js hint and all the warnings are about the js verision im using and the last one was about 
+I ran my file through js hint and all the warnings are about the js version im using and the last one was about 
 about using a variable outside of the loop 
 ![js](assests/readme_images/js_validation_explain.png) 
  
