@@ -232,5 +232,4 @@ A button should appear to click: _Open Preview_ or _Open Browser_.
 Ciaran Merrit
 Code institue : i think blog
 Grawnya : helped by showing and amazing Readme layout
-
 Harry Dhillon
