@@ -45,6 +45,9 @@ the purpose of this website it to be able to bring people together in a controll
 the plan is to make it easier for people like me that don't have much spare time to game and when they do they cant find anyone to play with, so with this i added functions to the site so that admins and superusers can make sessions and only registered people can join for extra protection.
 
 # User Stories
+![projects](assests/readme_images/user_stories.png)
+[link to project stories](https://github.com/users/DoubleARon96/projects/5/views/1)
+all major stories where completed and moved across when working on and done.
 
 # For the Future
 the future i plan to add more interactivity like an voice chat to the sessions the users will be able to post images from games and have a profile with a logo or profile picture.
@@ -53,7 +56,6 @@ Scope
 
 ## Structure
 the structure of the project is a very basic layout so its easy to use and look thorugh the pagesand works with the databse so pages can be updated and changed from the admin page and all questions can be changed and and deleted.
-# Project Applications
 
 # Project Databases
 ![db_plan](assests/readme_images/plan-data-c.png)
