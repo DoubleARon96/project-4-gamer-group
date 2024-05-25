@@ -37,12 +37,12 @@
             {% csrf_token %}
             <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
           </form>
-          {% else %}
-          {% endif %}
         </div>
       </div>
     </div>
   </div>
+  {% else %}
+  {% endif %}
 </div>
 <!-- Delete confirmation modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
