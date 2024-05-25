@@ -7,9 +7,10 @@ the Game together project is a personal one to help fill a need i felt that was 
 
 
 # Visit the Website Here
+[website link](https://lets-game-together-a5473aa86515.herokuapp.com/)
 
 # Visit the Project's GitHub Repository Here
-[link](https://github.com/DoubleARon96/project-4-gamer-group)
+[Repo link](https://github.com/DoubleARon96/project-4-gamer-group)
 
 # Responsive Image
 
@@ -127,6 +128,7 @@ This project utilises allauth to allow users to register, login, logout etc. on 
 * GitHub – The project’s Version Control.
 * Heroku – To deploy the webpage.
 * [animate](https://animate.style/) - I used this for animations but haven't got around to adding them 
+* [git commits](https://dev.to/phukon/how-i-write-commits-like-a-pro-340l?ref=dailydev) - I used this to help word and set out my commits
 # Styling
 * Bootstrap – To provide extra styling and positioning.
 * Font Awesome – For the X's on the questions awaiting approval.
@@ -150,16 +152,20 @@ about using a variable outside of the loop
  
 # W3C HTML Validator
 The html I struggled with because of the mix of elements being added I didn't know what line they would be on
+when doing the html we found that the models where that i had a if statement out of alignment
+
 ![html](assests/readme_images/html_val_1.png)
 
 
 # W3C CSS Validator
 I haven't really used much css i used bootstraps basic css
+
 ![css](assests/readme_images/css_val_1.png)
 
 
 # Python Syntax Checker PEP8 Validation
 all easy fixes mainly white spaces and lines that are too long.
+
 ![python_val_1](assests/readme_images/python_val_1.png)
 ![python_val_2](assests/readme_images/python_val_2.png)
 
@@ -170,9 +176,10 @@ all easy fixes mainly white spaces and lines that are too long.
 ![Responsive_gif](assests/readme_images/responsive_website.gif)
 
 # Manual Testing
-Automated Testing
-Resolved
-Unresolved
+the manual testing i did and sent to a few people i know to check the main issues was spelling on my home.
+the the edit and delete on questions was cleaned up and texted multiple times and limits
+all the validation is done and comment on the the errors we found.
+
 # Deployment
 to deploy the project you will need to follow these :
 
@@ -201,10 +208,6 @@ to deploy the project you will need to follow these :
 * Search for the sight repository and then connect to it by selecting the “Connect” button.
 * Scroll down to the bottom of the “Deploy” Page and select the type of deployment you want to do. If you opt to “Automatically Deploy”, it will deploy every time you push new code to your repository or you will have to manually deploy it, by selecting the button at the bottom of the page.
 The application is now deployed!
-
-For Code Help and Advice
-Helpful Resour/workspace/project-4-gamer-group/assestsces
-For Content and Code
  
 ## Bugs 
 # bug that are still there
@@ -212,7 +215,7 @@ For Content and Code
 
 ## GitPod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere and gitpod in the terminal, type:
 
 `python3 -m http.server`
 
@@ -229,4 +232,6 @@ A button should appear to click: _Open Preview_ or _Open Browser_.
 
 ## Credit
 Ciaran Merrit
+
+
 Harry Dhillon
