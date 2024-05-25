@@ -141,6 +141,7 @@ This project utilises allauth to allow users to register, login, logout etc. on 
 
 ## Testing
 # Code Validation
+# Js Hint 
 # W3C HTML Validator
 ![html](assests/readme_images/html_val_1.png)
 
