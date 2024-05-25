@@ -167,6 +167,7 @@ all easy fixes mainly white spaces and lines that are too long.
 ![Lighthouse](assests/readme_images/lighthouse_1.png)
 
 # Responsiveness
+![Responsive_gif](assests/readme_images/responsive_website.gif)
 
 # Manual Testing
 Automated Testing
