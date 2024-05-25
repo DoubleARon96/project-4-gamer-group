@@ -126,9 +126,11 @@ This project utilises allauth to allow users to register, login, logout etc. on 
 * Gitpod – Used as the development environment.
 * GitHub – The project’s Version Control.
 * Heroku – To deploy the webpage.
+* [animate](https://animate.style/) - I used this for animations but haven't got around to adding them 
 # Styling
 * Bootstrap – To provide extra styling and positioning.
 * Font Awesome – For the X's on the questions awaiting approval.
+* animate.style - For animations
 # Validation
 * W3C HTML Validation Service – To validate all the HTML files, including the templates from Django itself, due to editing them.
 * W3C CSS Validation Service – To validate the “style.css” page as well as the specific css page made to create the 
@@ -141,22 +143,30 @@ This project utilises allauth to allow users to register, login, logout etc. on 
 
 ## Testing
 # Code Validation
-# Js Hint 
+# Js Hint
+I ran my file through js hint and all the warnings are about the js verision im using and the last one was about 
+about using a variable outside of the loop 
+![js](assests/readme_images/js_validation_explain.png) 
+ 
 # W3C HTML Validator
+The html I struggled with because of the mix of elements being added I didn't know what line they would be on
 ![html](assests/readme_images/html_val_1.png)
 
+
 # W3C CSS Validator
+I haven't really used much css i used bootstraps basic css
 ![css](assests/readme_images/css_val_1.png)
 
 
 # Python Syntax Checker PEP8 Validation
+all easy fixes mainly white spaces and lines that are too long.
 ![python_val_1](assests/readme_images/python_val_1.png)
 ![python_val_2](assests/readme_images/python_val_2.png)
 
 # Lighthouse
 ![Lighthouse](assests/readme_images/lighthouse_1.png)
 
-Responsiveness
+# Responsiveness
 
 # Manual Testing
 Automated Testing
