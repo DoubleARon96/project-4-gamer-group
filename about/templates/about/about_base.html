@@ -12,13 +12,13 @@
           {% for content in contents %}
           <div class="image-container">
           </div>
-          <h2 class="card-title">{{content.title}}</h2>
+          <h2 class="card-title">{{ content.title }}</h2>
           <hr />
-          <p class="card-text h6">{{content.stories| safe}}</p>
-          <p class="text-muted">{{content.updated_on}}</p>
-          {% if request.user.is_superuser %}
-          <button class="btn btn-edit" data-stories_id="{{ content.id }}">Edit</button>
-          {% endif %}
+          <p id="stories{{ content.id }}" class="card-text h6 story-content">{{ content.stories|safe }}</p>
+          <p class="text-muted">{{ content.updated_on }}</p>
+            {% if request.user.is_superuser %}
+            <button class="btn btn-edit" data-stories_id="{{ content.id }}">Edit</button>
+            {% endif %}
           {% endfor %}
         </div>
       </div>
