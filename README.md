@@ -6,18 +6,18 @@ thank you for looking thought the ReadMe.
 the Game together project is a personal one to help fill a need i felt that was needed. this project is a basic and simple idea, like the project its self the layout and logic is simple to run on this project, the plan is to make a platform that can bring adults and young adults together by making gaming in groups more of an easy task.
 
 
-# Visit the Website Here
+## Visit the Website Here
 [website link](https://lets-game-together-a5473aa86515.herokuapp.com/)
 
-# Visit the Project's GitHub Repository Here
+## Visit the Project's GitHub Repository Here
 [Repo link](https://github.com/DoubleARon96/project-4-gamer-group)
 
-# Website Highlights
+## Website Highlights
 ![home](assests/readme_images/Screenshot_6.png)
 ![sessions](assests/readme_images/Screenshot_5.png)
 
 
-## UX
+# UX
 the UX is a main part of the site by making it simple and easy to understand parts of the ux are 
 * Strategy
 * Scope
@@ -25,7 +25,7 @@ the UX is a main part of the site by making it simple and easy to understand par
 * Skeleton
 * Surface
 
-# Strategy
+## Strategy
 ![frame_plan](assests/readme_images/plan-data-a.png)
 
 ![rough_plan](assests/readme_images/rough-plan.jpg)
@@ -40,31 +40,31 @@ Target audience :
 * people that like to game in groups 
 
 
-# Purpose
+## Purpose
 the purpose of this website it to be able to bring people together in a controlled and monitored way while gaming.
 the plan is to make it easier for people like me that don't have much spare time to game and when they do they cant find anyone to play with, so with this i added functions to the site so that admins and superusers can make sessions and only registered people can join for extra protection.
 
-# User Stories
+## User Stories
 ![projects](assests/readme_images/user_stories.png)
 [link to project stories](https://github.com/users/DoubleARon96/projects/5/views/1)
 all major stories where completed and moved across when working on and done.
 
-# For the Future
+## For the Future
 the future i plan to add more interactivity like an voice chat to the sessions the users will be able to post images from games and have a profile with a logo or profile picture.
 Scope
 
 
-## Structure
+# Structure
 the structure of the project is a very basic layout so its easy to use and look through the page and works with the datable so pages can be updated and changed from the admin page and all questions can be changed and and deleted.
 
-# Project Databases
+## Project Databases
 ![db_plan](assests/readme_images/plan-data-c.png)
 this was my original plan for the data bases but i have adjusted it to work with the project now. there is three data bases one for the home page welcome message , the game sessions and the about page.
 
-# Accounts 
+## Accounts 
 the accounts are the authentication so users can get around the site and if they don't meet the requirements they wont be able to get around the site.
 
-# Posts/Sessions
+## Posts/Sessions
 within this it will hold the users data that made it and will have players that leave questions in the question part, it will also store the game , the amount of players and a brief description of what the host has planned 
 
 the models can be broken down into
@@ -80,31 +80,31 @@ the models can be broken down into
 
 # Surface
 the surface is the look of the page basically the html and css 
-# Font
+## Font
 sadly I haven't added a basic font to the website.
 
-# Icons
+## Icons
 Icons i used where from font awesome
 
-# Colours
+## Colours
 i choose the green white and black because the glow makes it feels more game like and simple colours so its not hard to see or read the text 
 
-# Responsive Screens
+## Responsive Screens
 i made the site responsive with the help of bootstrap because of the columns and being able to make it fit the page no matter what screen the user is using.
 
 # Features
 
-  # Home Page
+  ## Home Page
   the home page has a welcome message on to from the admins this will change manually by the admin throughout the year for different seasons 
   ![home page](assests/readme_images/Screenshot_6.png)
 
-  # Navigation Bar
+  ## Navigation Bar
   the nav bar will change depending on if you have logged in or not. this is to stop non account holders from leaving messages without being able to find out who did it for safety
 
-  # Questions
+  ## Questions
   the question or comments are there to get a little more information from the users that made the game session, so you can ask what mode , mission or if they will host another session to.
   ![Questions](assests/readme_images/Screenshot_5.png)
-  # Approval
+  ## Approval
   ![question approved and not](assests/readme_images/approval_3.png)
   1. ![how to approve](assests/readme_images/approval_4.png)
   2. ![login](assests/readme_images/approval_5.png)
@@ -112,16 +112,16 @@ i made the site responsive with the help of bootstrap because of the columns and
   4. ![approval](assests/readme_images/approval_2.png)
 
 
-# Django Template Pages
+## Django Template Pages
 This project utilises allauth to allow users to register, login, logout etc. on the website and provides excellent out-of-the-box functionality.
  
-## Technologies Used
-# Languages
+# Technologies Used
+## Languages
 * HTML - To create the Django templates for the associated views and models in the project applications.
 * CSS - To style the website.
 * JavaScript - to handle the buttons that questions and to make a new story on the about page
 * Python – Is the primary language of Django and used to create all forms, models and views.
-# Tools
+## Tools
 * Django – The framework used in this project to join the databases with a website.
 * Crispy Forms – Formats the models into forms on webpages.
 * Gitpod – Used as the development environment.
@@ -129,11 +129,11 @@ This project utilises allauth to allow users to register, login, logout etc. on 
 * Heroku – To deploy the webpage.
 * [animate](https://animate.style/) - I used this for animations but haven't got around to adding them 
 * [git commits](https://dev.to/phukon/how-i-write-commits-like-a-pro-340l?ref=dailydev) - I used this to help word and set out my commits
-# Styling
+## Styling
 * Bootstrap – To provide extra styling and positioning.
 * Font Awesome – For the X's on the questions awaiting approval.
 * animate.style - For animations
-# Validation
+## Validation
 * W3C HTML Validation Service – To validate all the HTML files, including the templates from Django itself, due to editing them.
 * W3C CSS Validation Service – To validate the “style.css” page as well as the specific css page made to create the 
 * JSHint – To validate the code within the “script.js” file.
@@ -143,42 +143,8 @@ This project utilises allauth to allow users to register, login, logout etc. on 
 # Databases
 * ElephantSQL – The final database used for the deployed project.
 
-## Testing
-# Code Validation
-# Js Hint
-I ran my file through js hint and all the warnings are about the js version im using and the last one was about 
-about using a variable outside of the loop 
-![js](assests/readme_images/js_validation_explain.png) 
- 
-# W3C HTML Validator
-The html I struggled with because of the mix of elements being added I didn't know what line they would be on
-when doing the html we found that the models where that i had a if statement out of alignment
-
-![html](assests/readme_images/html_val_1.png)
-
-
-# W3C CSS Validator
-I haven't really used much css i used bootstraps basic css
-
-![css](assests/readme_images/css_val_1.png)
-
-
-# Python Syntax Checker PEP8 Validation
-all easy fixes mainly white spaces and lines that are too long.
-
-![python_val_1](assests/readme_images/python_val_1.png)
-![python_val_2](assests/readme_images/python_val_2.png)
-
-# Lighthouse
-![Lighthouse](assests/readme_images/lighthouse_1.png)
-
-# Responsiveness
-![Responsive_gif](assests/readme_images/responsive_website.gif)
-
-# Manual Testing
-the manual testing i did and sent to a few people i know to check the main issues was spelling on my home.
-the the edit and delete on questions was cleaned up and texted multiple times and limits
-all the validation is done and comment on the the errors we found.
+# Testing
+[manual testing](MANUAL_TESTS.md "link to manual testing")
 
 # Deployment
 to deploy the project you will need to follow these :
