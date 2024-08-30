@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from django.contrib import messages
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.http import HttpResponseRedirect
 from django.contrib.admin.views.decorators import staff_member_required
 from .models import AdminStory
@@ -59,29 +59,25 @@ def about_form(request):
 
 
 @staff_member_required
-def edit_story(request, id, gamer_tag):
+def edit_story(request, id):
     """
-    this function is to edit stories but still isn't full incorporate
+    This function is to edit stories but still isn't fully incorporated
     """
-
     if request.method == "POST":
+        post = get_object_or_404(AdminStory, id=id)
+        about_form = aboutForm(data=request.POST, instance=post)
 
-        queryset = AdminStory.objects.all()
-        post = get_object_or_404(queryset, slug=id)
-        stories = get_object_or_404(AdminStory, pk=id)
-        aboutform = aboutform(data=request.POST, instance=stories)
-
-        if post.is_valid() and gamer_tag == request.superuser:
-            stories = id.save(commit=False)
-            stories.post = post
-            stories.approved = False
-            stories.save()
-
+        if about_form.is_valid():
+            if request.user.is_superuser:
+                story = about_form.save(commit=False)
+                story.approved = False
+                story.save()
+                messages.success(request, 'Story updated successfully!')
         else:
-            messages.add_message(request, messages.ERROR,
-                                 'Error updating comment!')
+            messages.error(request,
+                           f'Error updating story: {about_form.errors}')
 
-    return HttpResponseRedirect(reverse('about_base', args=[id]))
+    return redirect('about')
 
 
 def story_delete(request, id):

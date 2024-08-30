@@ -1,18 +1,17 @@
 const editButtons = document.getElementsByClassName("btn-edit");
-const commentText = document.getElementById("stories${ content.id }");
-const aboutForm = document.getElementById("aboutForm");
+const commentText = document.getElementById("id_body");
+const aboutForm = document.getElementById("aboutform");
 const submitButton = document.getElementById("submitButton");
 
 
 for (let button of editButtons) {
-  button.addEventListener("click", (a) => {
-    let stories_id = a.target.dataset.stories_id;
-    let node = document.getElementById(`stories${stories_id}`);
-    console.log(node)
-    let storiesContent = node.textContent;
-    commentText.value = storiesContent;
+  button.addEventListener("click", (event) => {
+    let storyId = event.target.dataset.stories_id;
+    let node = document.getElementById(`stories${storyId}`);
+    let storyContent = node.textContent;
+    commentText.value = storyContent;
     submitButton.innerText = "Update";
-    commentForm.setAttribute("action", `edit_story/${stories_id}/`);
+    commentForm.setAttribute("action", `edit_story/${storyId}/`);
   });
 }
 
