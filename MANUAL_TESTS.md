@@ -183,4 +183,46 @@ Document any issues or bugs found during testing.
 
 ## About
 
+Objective: Verify that the About page renders correctly and handles form submissions.
+
+Steps:
+
+1. Navigate to the About page URL.
+2. Ensure the page loads without errors and displays the list of stories.
+3. Fill out the form and submit it.
+4. Verify that a success message is displayed and the new story appears in the list.
+5. Check that the form is reset after submission.
+Expected Results:
+
+The About page should display all stories.
+Submitting the form should add a new story and display a success message.
+
+### About form
+Objective: Verify that the form renders correctly and handles submissions.
+
+Steps:
+
+1. Navigate to the form URL.
+2. Ensure the form loads without errors.
+3. Fill out the form and submit it.
+4. Verify that a success message is displayed and the form is reset.
+Expected Results:
+
+The form should load and submit without errors.
+A success message should be displayed upon submission.
+
+### Edit Story
+Objective: Verify that stories can be edited by staff members.
+
+Steps:
+
+1. Log in as a staff member.
+2. Navigate to the edit story URL with a valid story ID.
+3. Ensure the form loads with the story’s current data.
+4. Modify the data and submit the form.
+5. Verify that a success message is displayed and the story is updated.
+Expected Results:
+
+The form should load with the current story data.
+Submitting the form should update the story and display a success message.
 

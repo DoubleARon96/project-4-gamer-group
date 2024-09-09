@@ -5,23 +5,22 @@
 
 
 <div class="col-12 mt-3 left">
+  {% for content in contents %}
   <div class="row">
     <div class="col-md-12 text-center  border ">
       <div class="card mb-4 ">
         <div class="card-body">
-          {% for content in contents %}
           <div class="image-container">
           </div>
           <h2 class="card-title">{{ content.title }}</h2>
           <hr />
           <p id="stories{{ content.id }}" class="card-text h6 story-content btn-edit">{{ content.stories|safe }}</p>
           <p class="text-muted">{{ content.updated_on }}</p>
-          {% endfor %}
         </div>
       </div>
     </div>
   </div>
-  <!--needs Finishing-->
+  {% endfor %}
   {% if request.user.is_superuser %}
   <div class="row justify-content-center">
     <div class="col-md-11 card text-center ">
