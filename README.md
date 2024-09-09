@@ -233,7 +233,7 @@ A button should appear to click: _Open Preview_ or _Open Browser_.
 
 A large amount of code came from the Code Institute, I Think Therefore I Blog Project.
 Code Institute, I Think Therefore I Blog
-I Think Therefore I Blog is a walkthrough project by Code Institute, this project gave students an introduction to Django/Stripe/
+I Think Therefore I Blog is a walkthrough project by Code Institute, this project gave students an introduction to Django/
 The core functionality of the strip and baskets is all taken from the I Think Therefore I Blog project.
 
 ### Bootstrap
