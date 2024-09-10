@@ -52,12 +52,10 @@ Target audience :
 | id  |  Title | Content |
 | ------ | ------ | ------ |
 | [1] |About Page Info Page :| as a site user I will be able to click on and view admin stories and about them
-
 AC1 When the info page link is clicked you can view the page
-
 Admins can update this page: As an admin, I can make updates and change the info on this page.
-
 AC1 This will be visible in the admin page|
+
 | [2]|Approve Posts
  | As a site admin, I will be able to approve posts from none admins and approve comments on posts made
 
