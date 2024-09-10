@@ -48,50 +48,19 @@ Target audience :
 
 
 ## User Stories
-![projects](assests/readme_images/user_stories.png)
-| id  |  Title | Content |
-| ------ | ------ | ------ |
-| [1] |About Page Info Page :| as a site user I will be able to click on and view admin stories and about them
-AC1 When the info page link is clicked you can view the page
-Admins can update this page: As an admin, I can make updates and change the info on this page.
-AC1 This will be visible in the admin page|
+| id  | Title                   | Content                                                                                                                                                                                                                     |
+| --- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [1] | About Page Info Page    | As a site user, I will be able to click on and view admin stories and about them. AC1: When the info page link is clicked, you can view the page. Admins can update this page: As an admin, I can make updates and change the info on this page. AC1: This will be visible in the admin page. |
+| [2] | Approve Posts           | As a site admin, I will be able to approve posts from non-admins and approve comments on posts made. Given a logged-in user, they can approve a post and disapprove a post/comment. Could Have.                             |
+| [3] | Posts/Sessions          | Posts/sessions: As a user, I will be able to click on posts, view them, and join the posts/sessions. AC1: Be able to click and view the post. AC2: Be able to join in sessions by clicking. AC3: Have a limited number of users that can join depending on the game. AC4: Be able to unjoin sessions. |
+| [4] | Post/Session Management | As a Site Admin, I can create, read, update, and delete posts so that I can manage my content. Given a logged-in user, they can create a post. Given a logged-in user, they can read a post. Given a logged-in user, they can update a post. Given a logged-in user, they can delete a post. |
+| [5] | Account registration    | As a Site User, I can register an account so that I can comment on a post. Given an email, a user can register an account. Then the user can log in. When the user is logged in, they can comment.                           |
+| [6] | View Paginated Posts/Sessions | As a site user, I can view a paginated list of posts so that I can select which post I want to view. Given more than one post in the database, these multiple posts are listed. When a user opens the main page, a list of posts is seen. Then the user sees all post titles with pagination to choose what to read. |
+| [7] | Plan Data Base          | Plan out how the database should look. E.g., First Name, Surname, Date of birth.                                                                                                                                             |
+| [8] | Edit and Delete Posts/Sessions | Edit: AC1: Users must be able to change and add comments. Delete: AC1: Users and admins can delete posts and comments.                                                                                                   |
+| [9] | Styles And Views Bugs   | Get models to view on pages. Get CSS to link up. Centre game lists.                                                                                                                                                         |
+| [10] | Documentation           | Fill out the readme with full details.                                                                                                                                                                                      |
 
-| [2]|Approve Posts
- | As a site admin, I will be able to approve posts from none admins and approve comments on posts made
-
-Given a logged in user, they can approve a posts and disapprove a post/ comment | Could Have |
-| [3]|Posts/Sessions| Posts/sessions: as a user i will be able to click on posts view them and join the posts / sessions
-
-- AC1 Be able to click and view the post
-- AC2 Be able to join in sessions by clicking
-- AC3 have a limited number of users that can join depending on game
-- AC4 be able to unjoin sessions |
-| [4]|Post/Session Management | As a Site Admin I can create, read, update and delete posts so that I can manage my content
-* Given a logged in user, they can create a post
-* Given a logged in user, they can read a post
-* Given a logged in user, they can update a post
-* Given a logged in user, they can delete a post |
-| [5]|Account registration | As a Site User I can register an account so that I can comment on a post
-- Given an email a user can register an account.
-- Then the user can log in.
-- When the user is logged in they can comment.|
-| [6]|View Paginated Posts/Sessions | As a site user, I can view a paginated list of posts so that I can select which post I want to view
-
-- Given more than one post in the database, these multiple posts are listed.
-- When a user opens the main page a list of posts is seen.
-- Then the user sees all post titles with pagination to choose what to read. |
-| [7]|Plan Data Base| Plan out how the database should look E.g.
-- First Name , Surname , Date of birth|
-| [8]|Edit and Delete Posts/Sessions| 
-* Edit
-- AC1 : users must be able to change and add comments
-* Delete
-- AC1 : users and admins can delete posts and comments|
-| [9]|Styles And Views Bugs| Get models to view on pages
-- get CSS to link up
-- Centre game lists|
-| [10]Documentation| fill out the read me with full details |
-\
 &nbsp;
 [link to project stories](https://github.com/users/DoubleARon96/projects/5/views/1)
 All major tasks were completed and successfully transitioned during the workflow.
